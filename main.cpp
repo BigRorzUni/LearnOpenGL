@@ -228,5 +228,22 @@ void processInput(GLFWwindow* window)
         glfwSetWindowShouldClose(window, true);
         return;
     }
-    
+
+    // get current polygon mode
+    GLint polygonMode[2];
+    glGetIntegerv(GL_POLYGON_MODE, polygonMode);
+
+    static bool tabPressedLastFrame = false;
+    bool tabPressed = glfwGetKey(window, GLFW_KEY_TAB);
+
+    // tab to switch between fill and line mode
+    if(tabPressed && !tabPressedLastFrame)
+    {
+        if(polygonMode[0] == GL_LINE && polygonMode[1] == GL_LINE)
+            glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+        else
+            glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    }
+
+    tabPressedLastFrame = tabPressed;
 }
