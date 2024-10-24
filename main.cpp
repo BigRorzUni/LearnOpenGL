@@ -5,6 +5,11 @@
 // prototypes
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
+unsigned int createShaderProgram(const char* vertexShaderSource, const char* fragmentShaderSource);
+void setupVAOandVBO(unsigned int &VAO, unsigned int &VBO, unsigned int &EBO, 
+                    float* vertices, size_t verticesSize, 
+                    unsigned int* indices, size_t indicesSize);
+
 
 // settings
 const unsigned int SCR_WIDTH = 800;
@@ -24,6 +29,13 @@ const char* fragmentShaderSource = "#version 330 core\n"
 "void main()\n"
 "{\n"
 "FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
+"}\0";
+
+const char* fragmentShaderSource2 = "#version 330 core\n"
+"out vec4 FragColor;\n"
+"void main()\n"
+"{\n"
+"FragColor = vec4(0.5f, 1.0f, 0.2f, 1.0f);\n"
 "}\0";
 
 
@@ -67,7 +79,115 @@ int main()
         return -1;
     }
     
+    // ----------------- SHADER PROGRAM -----------------
+
+    unsigned int shaderProgram1 = createShaderProgram(vertexShaderSource, fragmentShaderSource);
+    unsigned int shaderProgram2 = createShaderProgram(vertexShaderSource, fragmentShaderSource2);
     
+
+    // ----------------- VERTEX DATA -----------------
+
+    // triangle 1
+    float vertices1[] = 
+    {
+        0.6f, 0.6f, 0.0f,  // Vertex 0
+        0.6f, 0.0f, 0.0f,  // Vertex 1
+        0.0f, 0.2f, 0.0f   // Vertex 2
+    };
+
+    // triangle 2
+    float vertices2[] = 
+    {
+        -0.6f, -0.6f, 0.0f,  // Vertex 0
+        -0.6f, 0.0f, 0.0f,   // Vertex 1
+        0.0f, -0.2f, 0.0f    // Vertex 2
+    };
+    // order in which they are drawn
+    unsigned int indices[] = 
+    { 
+        0, 1, 2, 
+    };
+
+    // ----------------- VERTEX BUFFER AND ATTRIBUTES -----------------
+
+    unsigned int VBO1, VAO1, EBO1;
+    setupVAOandVBO(VAO1, VBO1, EBO1, vertices1, sizeof(vertices1), indices, sizeof(indices));
+
+    unsigned int VBO2, VAO2, EBO2;
+    setupVAOandVBO(VAO2, VBO2, EBO2, vertices2, sizeof(vertices2), indices, sizeof(indices));
+    
+    while(!glfwWindowShouldClose(window))
+    {
+        // ----------------- INPUT -----------------
+        processInput(window);
+
+        // ----------------- RENDERING -----------------
+        glClearColor(0.5f, 0.2f, 0.2f, 0.5f);
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        // use shader program and rebind vertex array object (also binds VBO and vertex attributes)
+        glUseProgram(shaderProgram1);
+        glBindVertexArray(VAO1);
+        glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, 0); // uses currently bound VAO
+
+        // render second triangle with different VAO/VBO & shader
+        glUseProgram(shaderProgram2);
+        glBindVertexArray(VAO2);
+        glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, 0);
+        
+        // unbind VAO to avoid accidental changes
+        glBindVertexArray(0); 
+
+        // ----------------- SWAP BUFFERS AND POLL EVENTS -----------------
+        glfwSwapBuffers(window);
+        glfwPollEvents();
+    }
+    
+    glfwTerminate();
+        
+    return 0;
+}
+
+// methods
+void framebuffer_size_callback(GLFWwindow* window, int width, int height)
+{
+    glViewport(0, 0, width, height);
+}
+
+void processInput(GLFWwindow* window)
+{
+    // escape to exit
+    if(glfwGetKey(window, GLFW_KEY_ESCAPE))
+    {
+        glfwSetWindowShouldClose(window, true);
+        return;
+    }
+
+    // get current polygon mode
+    GLint polygonMode[2];
+    glGetIntegerv(GL_POLYGON_MODE, polygonMode);
+
+    static bool tabPressedLastFrame = false;
+    bool tabPressed = glfwGetKey(window, GLFW_KEY_TAB);
+
+    // tab to switch between fill and line mode
+    if(tabPressed && !tabPressedLastFrame)
+    {
+        if(polygonMode[0] == GL_LINE && polygonMode[1] == GL_LINE)
+            glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+        else
+            glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    }
+
+    tabPressedLastFrame = tabPressed;
+}
+
+unsigned int createShaderProgram(const char* vertexShaderSource, const char* fragmentShaderSource)
+{
+    // ------- INIT ERROR CHECKING VARIABLES -------
+    int success;
+    char infoLog[512];
+
     // ----------------- VERTEX SHADER -----------------
     // creating vertex shader and compiling it with source code
     unsigned int vertexShader;
@@ -77,9 +197,6 @@ int main()
     glCompileShader(vertexShader);
 
     // error checking in vertex shader
-    int success;
-    char infoLog[512];
-
     glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
     if(!success)
     {
@@ -127,32 +244,15 @@ int main()
         std::cout << "Error: Shader program linking failed" << infoLog << std::endl;
     }
 
-    std::cout << "Shader program linked" << std::endl;
-
     // delete shaders after linking
     glDeleteShader(vertexShader);
     glDeleteShader(fragmentShader);
 
-    // ----------------- VERTEX DATA -----------------
+    return shaderProgram;
+}
 
-    float vertices[] = 
-    {
-        0.5f, 0.5f, 0.0f, // top right
-        0.5f, -0.5f, 0.0f, // bottom right
-        -0.5f, -0.5f, 0.0f, // bottom left
-        -0.5f, 0.5f, 0.0f // top left
-    };
-
-    // order in which they are drawn
-    unsigned int indices[] = 
-    { // note that we start from 0!
-        0, 1, 3, // first triangle
-        1, 2, 3 // second triangle
-    };
-    // ----------------- VERTEX BUFFER AND ATTRIBUTES -----------------
-
-    unsigned int VBO, VAO, EBO;
-
+void setupVAOandVBO(unsigned int &VAO, unsigned int &VBO, unsigned int &EBO, float* vertices, size_t verticesSize, unsigned int* indices, size_t indicesSize)
+{
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
     glGenBuffers(1, &EBO);
@@ -163,87 +263,13 @@ int main()
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
     
     // copy vertices and indices data into VBO and EBO buffers respectively
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, verticesSize, vertices, GL_STATIC_DRAW);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indicesSize, indices, GL_STATIC_DRAW);
 
     // set vertex attribute pointers
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-        // layout (location = 0) so modify vertex attribute 0
-        // 3 floats per vertex (vec3)
-        // float data type
-        // not normalized
-        // stride is 3 floats
-        // the offset of the buffer is 0 (start at beginning)
     glEnableVertexAttribArray(0);
-        // enable the vertex attribute at 0 (location = 0)
 
-
-    // unbind VBO and VAO to avoid accidental changes, OpenGL has saved the state once the VAO was bound
-    // EBO is not saved so cannot be unbound
-    glBindBuffer(GL_ARRAY_BUFFER, 0); 
-    glBindVertexArray(0); 
-
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-    
-    while(!glfwWindowShouldClose(window))
-    {
-        // ----------------- INPUT -----------------
-        processInput(window);
-
-        // ----------------- RENDERING -----------------
-        glClearColor(0.5f, 0.2f, 0.2f, 0.5f);
-        glClear(GL_COLOR_BUFFER_BIT);
-
-        // use shader program and rebind vertex array object (also binds VBO and vertex attributes)
-        glUseProgram(shaderProgram);
-        glBindVertexArray(VAO);
-
-        // draw triangle
-        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0); // uses currently bound VAO
-        
-        // unbind VAO to avoid accidental changes
-        glBindVertexArray(0); 
-
-        // ----------------- SWAP BUFFERS AND POLL EVENTS -----------------
-        glfwSwapBuffers(window);
-        glfwPollEvents();
-    }
-    
-    glfwTerminate();
-        
-    return 0;
-}
-
-// methods
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)
-{
-    glViewport(0, 0, width, height);
-}
-
-void processInput(GLFWwindow* window)
-{
-    // escape to exit
-    if(glfwGetKey(window, GLFW_KEY_ESCAPE))
-    {
-        glfwSetWindowShouldClose(window, true);
-        return;
-    }
-
-    // get current polygon mode
-    GLint polygonMode[2];
-    glGetIntegerv(GL_POLYGON_MODE, polygonMode);
-
-    static bool tabPressedLastFrame = false;
-    bool tabPressed = glfwGetKey(window, GLFW_KEY_TAB);
-
-    // tab to switch between fill and line mode
-    if(tabPressed && !tabPressedLastFrame)
-    {
-        if(polygonMode[0] == GL_LINE && polygonMode[1] == GL_LINE)
-            glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-        else
-            glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-    }
-
-    tabPressedLastFrame = tabPressed;
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
 }
