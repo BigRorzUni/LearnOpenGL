@@ -6,18 +6,6 @@
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
 
-// methods
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)
-{
-    glViewport(0, 0, width, height);
-}
-
-void processInput(GLFWwindow* window)
-{
-    if(glfwGetKey(window, GLFW_KEY_ESCAPE))
-        glfwSetWindowShouldClose(window, true);
-}
-
 // settings
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
@@ -149,26 +137,34 @@ int main()
 
     float vertices[] = 
     {
-        -0.5f, -0.5f, 0.0f,
-        0.5f, -0.5f, 0.0f,
-        0.0f, 0.5f, 0.0f
+        0.5f, 0.5f, 0.0f, // top right
+        0.5f, -0.5f, 0.0f, // bottom right
+        -0.5f, -0.5f, 0.0f, // bottom left
+        -0.5f, 0.5f, 0.0f // top left
     };
 
+    // order in which they are drawn
+    unsigned int indices[] = 
+    { // note that we start from 0!
+        0, 1, 3, // first triangle
+        1, 2, 3 // second triangle
+    };
     // ----------------- VERTEX BUFFER AND ATTRIBUTES -----------------
 
-    unsigned int VBO, VAO;
+    unsigned int VBO, VAO, EBO;
 
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
+    glGenBuffers(1, &EBO);
     
-    // bind the Vertex Array Object first as it holds state of the VBO and vertex attributes
+    // bind the Vertex Array Object first as it holds state of the VBO, EBO and vertex attributes
     glBindVertexArray(VAO);
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
     
-    // copy vertices array into VBO buffer
+    // copy vertices and indices data into VBO and EBO buffers respectively
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-
-    std::cout << "VBO created and filled with vertice data" << std::endl;
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
     // set vertex attribute pointers
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
@@ -181,18 +177,20 @@ int main()
     glEnableVertexAttribArray(0);
         // enable the vertex attribute at 0 (location = 0)
 
-    std::cout << "VAO created and filled with vertex attribute pointers and VBO state" << std::endl;
 
     // unbind VBO and VAO to avoid accidental changes, OpenGL has saved the state once the VAO was bound
+    // EBO is not saved so cannot be unbound
     glBindBuffer(GL_ARRAY_BUFFER, 0); 
     glBindVertexArray(0); 
+
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     
     while(!glfwWindowShouldClose(window))
     {
-        // input
+        // ----------------- INPUT -----------------
         processInput(window);
 
-        // rendering commands
+        // ----------------- RENDERING -----------------
         glClearColor(0.5f, 0.2f, 0.2f, 0.5f);
         glClear(GL_COLOR_BUFFER_BIT);
 
@@ -201,9 +199,12 @@ int main()
         glBindVertexArray(VAO);
 
         // draw triangle
-        glDrawArrays(GL_TRIANGLES, 0, 3); // uses currently bound VAO and VBO
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0); // uses currently bound VAO
+        
+        // unbind VAO to avoid accidental changes
+        glBindVertexArray(0); 
 
-        // check/call events and swap buffers
+        // ----------------- SWAP BUFFERS AND POLL EVENTS -----------------
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
@@ -211,4 +212,21 @@ int main()
     glfwTerminate();
         
     return 0;
+}
+
+// methods
+void framebuffer_size_callback(GLFWwindow* window, int width, int height)
+{
+    glViewport(0, 0, width, height);
+}
+
+void processInput(GLFWwindow* window)
+{
+    // escape to exit
+    if(glfwGetKey(window, GLFW_KEY_ESCAPE))
+    {
+        glfwSetWindowShouldClose(window, true);
+        return;
+    }
+    
 }
