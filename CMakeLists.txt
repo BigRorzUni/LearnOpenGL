@@ -18,6 +18,8 @@ endif()
 # Include GLAD directories
 include_directories(SYSTEM "glad/include")
 
+include_directories("glm")
+
 # Set source files
 set(SRC
     main.cpp

@@ -5,7 +5,7 @@
 # compile CXX with /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
 C_DEFINES = 
 
-C_INCLUDES = -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glfw/include -isystem /Users/bigrorz/LearnOpenGL/glad/include
+C_INCLUDES = -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glm -I/Users/bigrorz/LearnOpenGL/glfw/include -isystem /Users/bigrorz/LearnOpenGL/glad/include
 
 C_FLAGSarm64 = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
 
@@ -13,7 +13,7 @@ C_FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Pl
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glfw/include -isystem /Users/bigrorz/LearnOpenGL/glad/include
+CXX_INCLUDES = -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glm -I/Users/bigrorz/LearnOpenGL/glfw/include -isystem /Users/bigrorz/LearnOpenGL/glad/include
 
 CXX_FLAGSarm64 = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
 
