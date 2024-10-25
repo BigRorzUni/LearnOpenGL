@@ -69,46 +69,46 @@ include CMakeFiles/Renderer.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Renderer.dir/flags.make
 
-CMakeFiles/Renderer.dir/main.cpp.o: CMakeFiles/Renderer.dir/flags.make
-CMakeFiles/Renderer.dir/main.cpp.o: /Users/bigrorz/LearnOpenGL/main.cpp
-CMakeFiles/Renderer.dir/main.cpp.o: CMakeFiles/Renderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/bigrorz/LearnOpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Renderer.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Renderer.dir/main.cpp.o -MF CMakeFiles/Renderer.dir/main.cpp.o.d -o CMakeFiles/Renderer.dir/main.cpp.o -c /Users/bigrorz/LearnOpenGL/main.cpp
+CMakeFiles/Renderer.dir/src/main.cpp.o: CMakeFiles/Renderer.dir/flags.make
+CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp
+CMakeFiles/Renderer.dir/src/main.cpp.o: CMakeFiles/Renderer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/bigrorz/LearnOpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Renderer.dir/src/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Renderer.dir/src/main.cpp.o -MF CMakeFiles/Renderer.dir/src/main.cpp.o.d -o CMakeFiles/Renderer.dir/src/main.cpp.o -c /Users/bigrorz/LearnOpenGL/src/main.cpp
 
-CMakeFiles/Renderer.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Renderer.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bigrorz/LearnOpenGL/main.cpp > CMakeFiles/Renderer.dir/main.cpp.i
+CMakeFiles/Renderer.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Renderer.dir/src/main.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bigrorz/LearnOpenGL/src/main.cpp > CMakeFiles/Renderer.dir/src/main.cpp.i
 
-CMakeFiles/Renderer.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Renderer.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bigrorz/LearnOpenGL/main.cpp -o CMakeFiles/Renderer.dir/main.cpp.s
+CMakeFiles/Renderer.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Renderer.dir/src/main.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bigrorz/LearnOpenGL/src/main.cpp -o CMakeFiles/Renderer.dir/src/main.cpp.s
 
-CMakeFiles/Renderer.dir/glad/src/glad.c.o: CMakeFiles/Renderer.dir/flags.make
-CMakeFiles/Renderer.dir/glad/src/glad.c.o: /Users/bigrorz/LearnOpenGL/glad/src/glad.c
-CMakeFiles/Renderer.dir/glad/src/glad.c.o: CMakeFiles/Renderer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/bigrorz/LearnOpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Renderer.dir/glad/src/glad.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Renderer.dir/glad/src/glad.c.o -MF CMakeFiles/Renderer.dir/glad/src/glad.c.o.d -o CMakeFiles/Renderer.dir/glad/src/glad.c.o -c /Users/bigrorz/LearnOpenGL/glad/src/glad.c
+CMakeFiles/Renderer.dir/lib/glad/src/glad.c.o: CMakeFiles/Renderer.dir/flags.make
+CMakeFiles/Renderer.dir/lib/glad/src/glad.c.o: /Users/bigrorz/LearnOpenGL/lib/glad/src/glad.c
+CMakeFiles/Renderer.dir/lib/glad/src/glad.c.o: CMakeFiles/Renderer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/bigrorz/LearnOpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Renderer.dir/lib/glad/src/glad.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Renderer.dir/lib/glad/src/glad.c.o -MF CMakeFiles/Renderer.dir/lib/glad/src/glad.c.o.d -o CMakeFiles/Renderer.dir/lib/glad/src/glad.c.o -c /Users/bigrorz/LearnOpenGL/lib/glad/src/glad.c
 
-CMakeFiles/Renderer.dir/glad/src/glad.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Renderer.dir/glad/src/glad.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bigrorz/LearnOpenGL/glad/src/glad.c > CMakeFiles/Renderer.dir/glad/src/glad.c.i
+CMakeFiles/Renderer.dir/lib/glad/src/glad.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Renderer.dir/lib/glad/src/glad.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/bigrorz/LearnOpenGL/lib/glad/src/glad.c > CMakeFiles/Renderer.dir/lib/glad/src/glad.c.i
 
-CMakeFiles/Renderer.dir/glad/src/glad.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Renderer.dir/glad/src/glad.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bigrorz/LearnOpenGL/glad/src/glad.c -o CMakeFiles/Renderer.dir/glad/src/glad.c.s
+CMakeFiles/Renderer.dir/lib/glad/src/glad.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Renderer.dir/lib/glad/src/glad.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/bigrorz/LearnOpenGL/lib/glad/src/glad.c -o CMakeFiles/Renderer.dir/lib/glad/src/glad.c.s
 
 # Object files for target Renderer
 Renderer_OBJECTS = \
-"CMakeFiles/Renderer.dir/main.cpp.o" \
-"CMakeFiles/Renderer.dir/glad/src/glad.c.o"
+"CMakeFiles/Renderer.dir/src/main.cpp.o" \
+"CMakeFiles/Renderer.dir/lib/glad/src/glad.c.o"
 
 # External object files for target Renderer
 Renderer_EXTERNAL_OBJECTS =
 
-Renderer: CMakeFiles/Renderer.dir/main.cpp.o
-Renderer: CMakeFiles/Renderer.dir/glad/src/glad.c.o
+Renderer: CMakeFiles/Renderer.dir/src/main.cpp.o
+Renderer: CMakeFiles/Renderer.dir/lib/glad/src/glad.c.o
 Renderer: CMakeFiles/Renderer.dir/build.make
-Renderer: glfw/src/libglfw3.a
+Renderer: lib/glfw/src/libglfw3.a
 Renderer: CMakeFiles/Renderer.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/bigrorz/LearnOpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Renderer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Renderer.dir/link.txt --verbose=$(VERBOSE)

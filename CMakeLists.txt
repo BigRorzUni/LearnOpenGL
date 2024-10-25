@@ -9,21 +9,19 @@ include_directories(${OPENGL_INCLUDE_DIRS})
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "GLFW lib only")
 set(GLFW_INSTALL OFF CACHE BOOL "GLFW lib only")
 
-add_subdirectory(glfw)
+add_subdirectory(lib/glfw)
 
 if(MSVC)
     SET(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /ENTRY:mainCRTStartup")
 endif()
 
 # Include GLAD directories
-include_directories(SYSTEM "glad/include")
-
-include_directories("glm")
+include_directories("include")
 
 # Set source files
 set(SRC
-    main.cpp
-    glad/src/glad.c
+    src/main.cpp
+    lib/glad/src/glad.c
 )
 
 # Add executable

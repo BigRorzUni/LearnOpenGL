@@ -11,10 +11,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.30.5/CMakeCCompiler.cmake"
   "CMakeFiles/3.30.5/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.30.5/CMakeSystem.cmake"
-  "/Users/bigrorz/LearnOpenGL/glfw/CMake/glfw3.pc.in"
-  "/Users/bigrorz/LearnOpenGL/glfw/CMake/glfw3Config.cmake.in"
-  "/Users/bigrorz/LearnOpenGL/glfw/CMakeLists.txt"
-  "/Users/bigrorz/LearnOpenGL/glfw/src/CMakeLists.txt"
+  "/Users/bigrorz/LearnOpenGL/lib/glfw/CMake/glfw3.pc.in"
+  "/Users/bigrorz/LearnOpenGL/lib/glfw/CMake/glfw3Config.cmake.in"
+  "/Users/bigrorz/LearnOpenGL/lib/glfw/CMakeLists.txt"
+  "/Users/bigrorz/LearnOpenGL/lib/glfw/src/CMakeLists.txt"
   "/opt/homebrew/Cellar/cmake/3.30.5/share/cmake/Modules/BasicConfigVersion-SameMajorVersion.cmake.in"
   "/opt/homebrew/Cellar/cmake/3.30.5/share/cmake/Modules/CMakeCInformation.cmake"
   "/opt/homebrew/Cellar/cmake/3.30.5/share/cmake/Modules/CMakeCXXInformation.cmake"
@@ -60,16 +60,16 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "glfw/src/glfw3Config.cmake"
-  "glfw/src/glfw3ConfigVersion.cmake"
-  "glfw/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "glfw/src/glfw3.pc"
-  "glfw/src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "lib/glfw/src/glfw3Config.cmake"
+  "lib/glfw/src/glfw3ConfigVersion.cmake"
+  "lib/glfw/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "lib/glfw/src/glfw3.pc"
+  "lib/glfw/src/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Renderer.dir/DependInfo.cmake"
-  "glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
-  "glfw/src/CMakeFiles/update_mappings.dir/DependInfo.cmake"
+  "lib/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "lib/glfw/src/CMakeFiles/update_mappings.dir/DependInfo.cmake"
   )

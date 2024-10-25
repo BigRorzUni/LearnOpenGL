@@ -1,9 +1,9 @@
 /Users/bigrorz/LearnOpenGL/build/CMakeFiles/Renderer.dir
 /Users/bigrorz/LearnOpenGL/build/CMakeFiles/edit_cache.dir
 /Users/bigrorz/LearnOpenGL/build/CMakeFiles/rebuild_cache.dir
-/Users/bigrorz/LearnOpenGL/build/glfw/CMakeFiles/edit_cache.dir
-/Users/bigrorz/LearnOpenGL/build/glfw/CMakeFiles/rebuild_cache.dir
-/Users/bigrorz/LearnOpenGL/build/glfw/src/CMakeFiles/glfw.dir
-/Users/bigrorz/LearnOpenGL/build/glfw/src/CMakeFiles/update_mappings.dir
-/Users/bigrorz/LearnOpenGL/build/glfw/src/CMakeFiles/edit_cache.dir
-/Users/bigrorz/LearnOpenGL/build/glfw/src/CMakeFiles/rebuild_cache.dir
+/Users/bigrorz/LearnOpenGL/build/lib/glfw/CMakeFiles/edit_cache.dir
+/Users/bigrorz/LearnOpenGL/build/lib/glfw/CMakeFiles/rebuild_cache.dir
+/Users/bigrorz/LearnOpenGL/build/lib/glfw/src/CMakeFiles/glfw.dir
+/Users/bigrorz/LearnOpenGL/build/lib/glfw/src/CMakeFiles/update_mappings.dir
+/Users/bigrorz/LearnOpenGL/build/lib/glfw/src/CMakeFiles/edit_cache.dir
+/Users/bigrorz/LearnOpenGL/build/lib/glfw/src/CMakeFiles/rebuild_cache.dir

@@ -139,7 +139,7 @@ glfw: cmake_check_build_system
 
 # fast build rule for target.
 glfw/fast:
-	$(MAKE) $(MAKESILENT) -f glfw/src/CMakeFiles/glfw.dir/build.make glfw/src/CMakeFiles/glfw.dir/build
+	$(MAKE) $(MAKESILENT) -f lib/glfw/src/CMakeFiles/glfw.dir/build.make lib/glfw/src/CMakeFiles/glfw.dir/build
 .PHONY : glfw/fast
 
 #=============================================================================
@@ -152,56 +152,56 @@ update_mappings: cmake_check_build_system
 
 # fast build rule for target.
 update_mappings/fast:
-	$(MAKE) $(MAKESILENT) -f glfw/src/CMakeFiles/update_mappings.dir/build.make glfw/src/CMakeFiles/update_mappings.dir/build
+	$(MAKE) $(MAKESILENT) -f lib/glfw/src/CMakeFiles/update_mappings.dir/build.make lib/glfw/src/CMakeFiles/update_mappings.dir/build
 .PHONY : update_mappings/fast
 
-glad/src/glad.o: glad/src/glad.c.o
-.PHONY : glad/src/glad.o
+lib/glad/src/glad.o: lib/glad/src/glad.c.o
+.PHONY : lib/glad/src/glad.o
 
 # target to build an object file
-glad/src/glad.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Renderer.dir/build.make CMakeFiles/Renderer.dir/glad/src/glad.c.o
-.PHONY : glad/src/glad.c.o
+lib/glad/src/glad.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Renderer.dir/build.make CMakeFiles/Renderer.dir/lib/glad/src/glad.c.o
+.PHONY : lib/glad/src/glad.c.o
 
-glad/src/glad.i: glad/src/glad.c.i
-.PHONY : glad/src/glad.i
+lib/glad/src/glad.i: lib/glad/src/glad.c.i
+.PHONY : lib/glad/src/glad.i
 
 # target to preprocess a source file
-glad/src/glad.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Renderer.dir/build.make CMakeFiles/Renderer.dir/glad/src/glad.c.i
-.PHONY : glad/src/glad.c.i
+lib/glad/src/glad.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Renderer.dir/build.make CMakeFiles/Renderer.dir/lib/glad/src/glad.c.i
+.PHONY : lib/glad/src/glad.c.i
 
-glad/src/glad.s: glad/src/glad.c.s
-.PHONY : glad/src/glad.s
+lib/glad/src/glad.s: lib/glad/src/glad.c.s
+.PHONY : lib/glad/src/glad.s
 
 # target to generate assembly for a file
-glad/src/glad.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Renderer.dir/build.make CMakeFiles/Renderer.dir/glad/src/glad.c.s
-.PHONY : glad/src/glad.c.s
+lib/glad/src/glad.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Renderer.dir/build.make CMakeFiles/Renderer.dir/lib/glad/src/glad.c.s
+.PHONY : lib/glad/src/glad.c.s
 
-main.o: main.cpp.o
-.PHONY : main.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Renderer.dir/build.make CMakeFiles/Renderer.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Renderer.dir/build.make CMakeFiles/Renderer.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Renderer.dir/build.make CMakeFiles/Renderer.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Renderer.dir/build.make CMakeFiles/Renderer.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Renderer.dir/build.make CMakeFiles/Renderer.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Renderer.dir/build.make CMakeFiles/Renderer.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -214,12 +214,12 @@ help:
 	@echo "... update_mappings"
 	@echo "... Renderer"
 	@echo "... glfw"
-	@echo "... glad/src/glad.o"
-	@echo "... glad/src/glad.i"
-	@echo "... glad/src/glad.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... lib/glad/src/glad.o"
+	@echo "... lib/glad/src/glad.i"
+	@echo "... lib/glad/src/glad.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

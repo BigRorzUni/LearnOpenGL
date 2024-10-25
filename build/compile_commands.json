@@ -1,140 +1,140 @@
 [
 {
   "directory": "/Users/bigrorz/LearnOpenGL/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glm -I/Users/bigrorz/LearnOpenGL/glfw/include -isystem /Users/bigrorz/LearnOpenGL/glad/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -o CMakeFiles/Renderer.dir/main.cpp.o -c /Users/bigrorz/LearnOpenGL/main.cpp",
-  "file": "/Users/bigrorz/LearnOpenGL/main.cpp",
-  "output": "CMakeFiles/Renderer.dir/main.cpp.o"
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -o CMakeFiles/Renderer.dir/src/main.cpp.o -c /Users/bigrorz/LearnOpenGL/src/main.cpp",
+  "file": "/Users/bigrorz/LearnOpenGL/src/main.cpp",
+  "output": "CMakeFiles/Renderer.dir/src/main.cpp.o"
 },
 {
   "directory": "/Users/bigrorz/LearnOpenGL/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glm -I/Users/bigrorz/LearnOpenGL/glfw/include -isystem /Users/bigrorz/LearnOpenGL/glad/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -o CMakeFiles/Renderer.dir/glad/src/glad.c.o -c /Users/bigrorz/LearnOpenGL/glad/src/glad.c",
-  "file": "/Users/bigrorz/LearnOpenGL/glad/src/glad.c",
-  "output": "CMakeFiles/Renderer.dir/glad/src/glad.c.o"
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -o CMakeFiles/Renderer.dir/lib/glad/src/glad.c.o -c /Users/bigrorz/LearnOpenGL/lib/glad/src/glad.c",
+  "file": "/Users/bigrorz/LearnOpenGL/lib/glad/src/glad.c",
+  "output": "CMakeFiles/Renderer.dir/lib/glad/src/glad.c.o"
 },
 {
-  "directory": "/Users/bigrorz/LearnOpenGL/build/glfw/src",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glfw/include -I/Users/bigrorz/LearnOpenGL/glfw/src -I/Users/bigrorz/LearnOpenGL/build/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/context.c.o -c /Users/bigrorz/LearnOpenGL/glfw/src/context.c",
-  "file": "/Users/bigrorz/LearnOpenGL/glfw/src/context.c",
-  "output": "glfw/src/CMakeFiles/glfw.dir/context.c.o"
+  "directory": "/Users/bigrorz/LearnOpenGL/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/src -I/Users/bigrorz/LearnOpenGL/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/context.c.o -c /Users/bigrorz/LearnOpenGL/lib/glfw/src/context.c",
+  "file": "/Users/bigrorz/LearnOpenGL/lib/glfw/src/context.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/context.c.o"
 },
 {
-  "directory": "/Users/bigrorz/LearnOpenGL/build/glfw/src",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glfw/include -I/Users/bigrorz/LearnOpenGL/glfw/src -I/Users/bigrorz/LearnOpenGL/build/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/init.c.o -c /Users/bigrorz/LearnOpenGL/glfw/src/init.c",
-  "file": "/Users/bigrorz/LearnOpenGL/glfw/src/init.c",
-  "output": "glfw/src/CMakeFiles/glfw.dir/init.c.o"
+  "directory": "/Users/bigrorz/LearnOpenGL/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/src -I/Users/bigrorz/LearnOpenGL/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/init.c.o -c /Users/bigrorz/LearnOpenGL/lib/glfw/src/init.c",
+  "file": "/Users/bigrorz/LearnOpenGL/lib/glfw/src/init.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/init.c.o"
 },
 {
-  "directory": "/Users/bigrorz/LearnOpenGL/build/glfw/src",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glfw/include -I/Users/bigrorz/LearnOpenGL/glfw/src -I/Users/bigrorz/LearnOpenGL/build/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/input.c.o -c /Users/bigrorz/LearnOpenGL/glfw/src/input.c",
-  "file": "/Users/bigrorz/LearnOpenGL/glfw/src/input.c",
-  "output": "glfw/src/CMakeFiles/glfw.dir/input.c.o"
+  "directory": "/Users/bigrorz/LearnOpenGL/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/src -I/Users/bigrorz/LearnOpenGL/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/input.c.o -c /Users/bigrorz/LearnOpenGL/lib/glfw/src/input.c",
+  "file": "/Users/bigrorz/LearnOpenGL/lib/glfw/src/input.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/input.c.o"
 },
 {
-  "directory": "/Users/bigrorz/LearnOpenGL/build/glfw/src",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glfw/include -I/Users/bigrorz/LearnOpenGL/glfw/src -I/Users/bigrorz/LearnOpenGL/build/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/monitor.c.o -c /Users/bigrorz/LearnOpenGL/glfw/src/monitor.c",
-  "file": "/Users/bigrorz/LearnOpenGL/glfw/src/monitor.c",
-  "output": "glfw/src/CMakeFiles/glfw.dir/monitor.c.o"
+  "directory": "/Users/bigrorz/LearnOpenGL/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/src -I/Users/bigrorz/LearnOpenGL/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/monitor.c.o -c /Users/bigrorz/LearnOpenGL/lib/glfw/src/monitor.c",
+  "file": "/Users/bigrorz/LearnOpenGL/lib/glfw/src/monitor.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/monitor.c.o"
 },
 {
-  "directory": "/Users/bigrorz/LearnOpenGL/build/glfw/src",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glfw/include -I/Users/bigrorz/LearnOpenGL/glfw/src -I/Users/bigrorz/LearnOpenGL/build/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/platform.c.o -c /Users/bigrorz/LearnOpenGL/glfw/src/platform.c",
-  "file": "/Users/bigrorz/LearnOpenGL/glfw/src/platform.c",
-  "output": "glfw/src/CMakeFiles/glfw.dir/platform.c.o"
+  "directory": "/Users/bigrorz/LearnOpenGL/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/src -I/Users/bigrorz/LearnOpenGL/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/platform.c.o -c /Users/bigrorz/LearnOpenGL/lib/glfw/src/platform.c",
+  "file": "/Users/bigrorz/LearnOpenGL/lib/glfw/src/platform.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/platform.c.o"
 },
 {
-  "directory": "/Users/bigrorz/LearnOpenGL/build/glfw/src",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glfw/include -I/Users/bigrorz/LearnOpenGL/glfw/src -I/Users/bigrorz/LearnOpenGL/build/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/vulkan.c.o -c /Users/bigrorz/LearnOpenGL/glfw/src/vulkan.c",
-  "file": "/Users/bigrorz/LearnOpenGL/glfw/src/vulkan.c",
-  "output": "glfw/src/CMakeFiles/glfw.dir/vulkan.c.o"
+  "directory": "/Users/bigrorz/LearnOpenGL/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/src -I/Users/bigrorz/LearnOpenGL/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/vulkan.c.o -c /Users/bigrorz/LearnOpenGL/lib/glfw/src/vulkan.c",
+  "file": "/Users/bigrorz/LearnOpenGL/lib/glfw/src/vulkan.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/vulkan.c.o"
 },
 {
-  "directory": "/Users/bigrorz/LearnOpenGL/build/glfw/src",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glfw/include -I/Users/bigrorz/LearnOpenGL/glfw/src -I/Users/bigrorz/LearnOpenGL/build/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/window.c.o -c /Users/bigrorz/LearnOpenGL/glfw/src/window.c",
-  "file": "/Users/bigrorz/LearnOpenGL/glfw/src/window.c",
-  "output": "glfw/src/CMakeFiles/glfw.dir/window.c.o"
+  "directory": "/Users/bigrorz/LearnOpenGL/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/src -I/Users/bigrorz/LearnOpenGL/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/window.c.o -c /Users/bigrorz/LearnOpenGL/lib/glfw/src/window.c",
+  "file": "/Users/bigrorz/LearnOpenGL/lib/glfw/src/window.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/window.c.o"
 },
 {
-  "directory": "/Users/bigrorz/LearnOpenGL/build/glfw/src",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glfw/include -I/Users/bigrorz/LearnOpenGL/glfw/src -I/Users/bigrorz/LearnOpenGL/build/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/egl_context.c.o -c /Users/bigrorz/LearnOpenGL/glfw/src/egl_context.c",
-  "file": "/Users/bigrorz/LearnOpenGL/glfw/src/egl_context.c",
-  "output": "glfw/src/CMakeFiles/glfw.dir/egl_context.c.o"
+  "directory": "/Users/bigrorz/LearnOpenGL/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/src -I/Users/bigrorz/LearnOpenGL/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/egl_context.c.o -c /Users/bigrorz/LearnOpenGL/lib/glfw/src/egl_context.c",
+  "file": "/Users/bigrorz/LearnOpenGL/lib/glfw/src/egl_context.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/egl_context.c.o"
 },
 {
-  "directory": "/Users/bigrorz/LearnOpenGL/build/glfw/src",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glfw/include -I/Users/bigrorz/LearnOpenGL/glfw/src -I/Users/bigrorz/LearnOpenGL/build/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/osmesa_context.c.o -c /Users/bigrorz/LearnOpenGL/glfw/src/osmesa_context.c",
-  "file": "/Users/bigrorz/LearnOpenGL/glfw/src/osmesa_context.c",
-  "output": "glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o"
+  "directory": "/Users/bigrorz/LearnOpenGL/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/src -I/Users/bigrorz/LearnOpenGL/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/osmesa_context.c.o -c /Users/bigrorz/LearnOpenGL/lib/glfw/src/osmesa_context.c",
+  "file": "/Users/bigrorz/LearnOpenGL/lib/glfw/src/osmesa_context.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.o"
 },
 {
-  "directory": "/Users/bigrorz/LearnOpenGL/build/glfw/src",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glfw/include -I/Users/bigrorz/LearnOpenGL/glfw/src -I/Users/bigrorz/LearnOpenGL/build/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/null_init.c.o -c /Users/bigrorz/LearnOpenGL/glfw/src/null_init.c",
-  "file": "/Users/bigrorz/LearnOpenGL/glfw/src/null_init.c",
-  "output": "glfw/src/CMakeFiles/glfw.dir/null_init.c.o"
+  "directory": "/Users/bigrorz/LearnOpenGL/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/src -I/Users/bigrorz/LearnOpenGL/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/null_init.c.o -c /Users/bigrorz/LearnOpenGL/lib/glfw/src/null_init.c",
+  "file": "/Users/bigrorz/LearnOpenGL/lib/glfw/src/null_init.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/null_init.c.o"
 },
 {
-  "directory": "/Users/bigrorz/LearnOpenGL/build/glfw/src",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glfw/include -I/Users/bigrorz/LearnOpenGL/glfw/src -I/Users/bigrorz/LearnOpenGL/build/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/null_monitor.c.o -c /Users/bigrorz/LearnOpenGL/glfw/src/null_monitor.c",
-  "file": "/Users/bigrorz/LearnOpenGL/glfw/src/null_monitor.c",
-  "output": "glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o"
+  "directory": "/Users/bigrorz/LearnOpenGL/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/src -I/Users/bigrorz/LearnOpenGL/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/null_monitor.c.o -c /Users/bigrorz/LearnOpenGL/lib/glfw/src/null_monitor.c",
+  "file": "/Users/bigrorz/LearnOpenGL/lib/glfw/src/null_monitor.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.o"
 },
 {
-  "directory": "/Users/bigrorz/LearnOpenGL/build/glfw/src",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glfw/include -I/Users/bigrorz/LearnOpenGL/glfw/src -I/Users/bigrorz/LearnOpenGL/build/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/null_window.c.o -c /Users/bigrorz/LearnOpenGL/glfw/src/null_window.c",
-  "file": "/Users/bigrorz/LearnOpenGL/glfw/src/null_window.c",
-  "output": "glfw/src/CMakeFiles/glfw.dir/null_window.c.o"
+  "directory": "/Users/bigrorz/LearnOpenGL/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/src -I/Users/bigrorz/LearnOpenGL/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/null_window.c.o -c /Users/bigrorz/LearnOpenGL/lib/glfw/src/null_window.c",
+  "file": "/Users/bigrorz/LearnOpenGL/lib/glfw/src/null_window.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/null_window.c.o"
 },
 {
-  "directory": "/Users/bigrorz/LearnOpenGL/build/glfw/src",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glfw/include -I/Users/bigrorz/LearnOpenGL/glfw/src -I/Users/bigrorz/LearnOpenGL/build/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/null_joystick.c.o -c /Users/bigrorz/LearnOpenGL/glfw/src/null_joystick.c",
-  "file": "/Users/bigrorz/LearnOpenGL/glfw/src/null_joystick.c",
-  "output": "glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o"
+  "directory": "/Users/bigrorz/LearnOpenGL/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/src -I/Users/bigrorz/LearnOpenGL/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/null_joystick.c.o -c /Users/bigrorz/LearnOpenGL/lib/glfw/src/null_joystick.c",
+  "file": "/Users/bigrorz/LearnOpenGL/lib/glfw/src/null_joystick.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.o"
 },
 {
-  "directory": "/Users/bigrorz/LearnOpenGL/build/glfw/src",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glfw/include -I/Users/bigrorz/LearnOpenGL/glfw/src -I/Users/bigrorz/LearnOpenGL/build/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_time.c.o -c /Users/bigrorz/LearnOpenGL/glfw/src/cocoa_time.c",
-  "file": "/Users/bigrorz/LearnOpenGL/glfw/src/cocoa_time.c",
-  "output": "glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o"
+  "directory": "/Users/bigrorz/LearnOpenGL/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/src -I/Users/bigrorz/LearnOpenGL/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_time.c.o -c /Users/bigrorz/LearnOpenGL/lib/glfw/src/cocoa_time.c",
+  "file": "/Users/bigrorz/LearnOpenGL/lib/glfw/src/cocoa_time.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/cocoa_time.c.o"
 },
 {
-  "directory": "/Users/bigrorz/LearnOpenGL/build/glfw/src",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glfw/include -I/Users/bigrorz/LearnOpenGL/glfw/src -I/Users/bigrorz/LearnOpenGL/build/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/posix_module.c.o -c /Users/bigrorz/LearnOpenGL/glfw/src/posix_module.c",
-  "file": "/Users/bigrorz/LearnOpenGL/glfw/src/posix_module.c",
-  "output": "glfw/src/CMakeFiles/glfw.dir/posix_module.c.o"
+  "directory": "/Users/bigrorz/LearnOpenGL/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/src -I/Users/bigrorz/LearnOpenGL/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/posix_module.c.o -c /Users/bigrorz/LearnOpenGL/lib/glfw/src/posix_module.c",
+  "file": "/Users/bigrorz/LearnOpenGL/lib/glfw/src/posix_module.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/posix_module.c.o"
 },
 {
-  "directory": "/Users/bigrorz/LearnOpenGL/build/glfw/src",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glfw/include -I/Users/bigrorz/LearnOpenGL/glfw/src -I/Users/bigrorz/LearnOpenGL/build/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/posix_thread.c.o -c /Users/bigrorz/LearnOpenGL/glfw/src/posix_thread.c",
-  "file": "/Users/bigrorz/LearnOpenGL/glfw/src/posix_thread.c",
-  "output": "glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o"
+  "directory": "/Users/bigrorz/LearnOpenGL/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/src -I/Users/bigrorz/LearnOpenGL/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/posix_thread.c.o -c /Users/bigrorz/LearnOpenGL/lib/glfw/src/posix_thread.c",
+  "file": "/Users/bigrorz/LearnOpenGL/lib/glfw/src/posix_thread.c",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/posix_thread.c.o"
 },
 {
-  "directory": "/Users/bigrorz/LearnOpenGL/build/glfw/src",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glfw/include -I/Users/bigrorz/LearnOpenGL/glfw/src -I/Users/bigrorz/LearnOpenGL/build/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_init.m.o -c /Users/bigrorz/LearnOpenGL/glfw/src/cocoa_init.m",
-  "file": "/Users/bigrorz/LearnOpenGL/glfw/src/cocoa_init.m",
-  "output": "glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o"
+  "directory": "/Users/bigrorz/LearnOpenGL/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/src -I/Users/bigrorz/LearnOpenGL/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_init.m.o -c /Users/bigrorz/LearnOpenGL/lib/glfw/src/cocoa_init.m",
+  "file": "/Users/bigrorz/LearnOpenGL/lib/glfw/src/cocoa_init.m",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o"
 },
 {
-  "directory": "/Users/bigrorz/LearnOpenGL/build/glfw/src",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glfw/include -I/Users/bigrorz/LearnOpenGL/glfw/src -I/Users/bigrorz/LearnOpenGL/build/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_joystick.m.o -c /Users/bigrorz/LearnOpenGL/glfw/src/cocoa_joystick.m",
-  "file": "/Users/bigrorz/LearnOpenGL/glfw/src/cocoa_joystick.m",
-  "output": "glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o"
+  "directory": "/Users/bigrorz/LearnOpenGL/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/src -I/Users/bigrorz/LearnOpenGL/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_joystick.m.o -c /Users/bigrorz/LearnOpenGL/lib/glfw/src/cocoa_joystick.m",
+  "file": "/Users/bigrorz/LearnOpenGL/lib/glfw/src/cocoa_joystick.m",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/cocoa_joystick.m.o"
 },
 {
-  "directory": "/Users/bigrorz/LearnOpenGL/build/glfw/src",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glfw/include -I/Users/bigrorz/LearnOpenGL/glfw/src -I/Users/bigrorz/LearnOpenGL/build/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_monitor.m.o -c /Users/bigrorz/LearnOpenGL/glfw/src/cocoa_monitor.m",
-  "file": "/Users/bigrorz/LearnOpenGL/glfw/src/cocoa_monitor.m",
-  "output": "glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o"
+  "directory": "/Users/bigrorz/LearnOpenGL/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/src -I/Users/bigrorz/LearnOpenGL/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_monitor.m.o -c /Users/bigrorz/LearnOpenGL/lib/glfw/src/cocoa_monitor.m",
+  "file": "/Users/bigrorz/LearnOpenGL/lib/glfw/src/cocoa_monitor.m",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o"
 },
 {
-  "directory": "/Users/bigrorz/LearnOpenGL/build/glfw/src",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glfw/include -I/Users/bigrorz/LearnOpenGL/glfw/src -I/Users/bigrorz/LearnOpenGL/build/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_window.m.o -c /Users/bigrorz/LearnOpenGL/glfw/src/cocoa_window.m",
-  "file": "/Users/bigrorz/LearnOpenGL/glfw/src/cocoa_window.m",
-  "output": "glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o"
+  "directory": "/Users/bigrorz/LearnOpenGL/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/src -I/Users/bigrorz/LearnOpenGL/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/cocoa_window.m.o -c /Users/bigrorz/LearnOpenGL/lib/glfw/src/cocoa_window.m",
+  "file": "/Users/bigrorz/LearnOpenGL/lib/glfw/src/cocoa_window.m",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o"
 },
 {
-  "directory": "/Users/bigrorz/LearnOpenGL/build/glfw/src",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/glfw/include -I/Users/bigrorz/LearnOpenGL/glfw/src -I/Users/bigrorz/LearnOpenGL/build/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/nsgl_context.m.o -c /Users/bigrorz/LearnOpenGL/glfw/src/nsgl_context.m",
-  "file": "/Users/bigrorz/LearnOpenGL/glfw/src/nsgl_context.m",
-  "output": "glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o"
+  "directory": "/Users/bigrorz/LearnOpenGL/build/lib/glfw/src",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -D_GLFW_COCOA -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/src -I/Users/bigrorz/LearnOpenGL/build/lib/glfw/src -g -std=c99 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -fPIC -Wall -o CMakeFiles/glfw.dir/nsgl_context.m.o -c /Users/bigrorz/LearnOpenGL/lib/glfw/src/nsgl_context.m",
+  "file": "/Users/bigrorz/LearnOpenGL/lib/glfw/src/nsgl_context.m",
+  "output": "lib/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o"
 }
 ]

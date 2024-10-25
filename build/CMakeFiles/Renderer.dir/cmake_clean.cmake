@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Renderer.dir/glad/src/glad.c.o"
-  "CMakeFiles/Renderer.dir/glad/src/glad.c.o.d"
-  "CMakeFiles/Renderer.dir/main.cpp.o"
-  "CMakeFiles/Renderer.dir/main.cpp.o.d"
+  "CMakeFiles/Renderer.dir/lib/glad/src/glad.c.o"
+  "CMakeFiles/Renderer.dir/lib/glad/src/glad.c.o.d"
+  "CMakeFiles/Renderer.dir/src/main.cpp.o"
+  "CMakeFiles/Renderer.dir/src/main.cpp.o.d"
   "Renderer"
   "Renderer.pdb"
 )
