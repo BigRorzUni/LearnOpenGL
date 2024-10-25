@@ -9,7 +9,9 @@
 
 // prototypes
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
-void processInput(GLFWwindow* window);
+void escInput(GLFWwindow* window);
+void tabInput(GLFWwindow* window);
+void incrementMix(GLFWwindow* window, float &mixValue);
 
 
 // settings
@@ -169,11 +171,15 @@ int main()
     shader.use();
     shader.setInt("tex1", 0); // set tex1 to use texture unit 0
     shader.setInt("tex2", 1); // set tex2 to use texture unit 1
+
+    static float mixValue = 0.2f;
     
     while(!glfwWindowShouldClose(window))
     {
         // ----------------- INPUT -----------------
-        processInput(window);
+        escInput(window);
+        tabInput(window);
+        incrementMix(window, mixValue);
 
         // ----------------- RENDERING -----------------
         glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
@@ -185,8 +191,10 @@ int main()
         glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, texture2);
 
-        // render container
         shader.use();
+
+        // set mix value
+        shader.setFloat("mixValue", mixValue);
 
         glBindVertexArray(VAO);
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0); // uses currently bound VAO
@@ -211,7 +219,7 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
     glViewport(0, 0, width, height);
 }
 
-void processInput(GLFWwindow* window)
+void escInput(GLFWwindow* window)
 {
     // escape to exit
     if(glfwGetKey(window, GLFW_KEY_ESCAPE))
@@ -219,7 +227,10 @@ void processInput(GLFWwindow* window)
         glfwSetWindowShouldClose(window, true);
         return;
     }
+}
 
+void tabInput(GLFWwindow* window)
+{
     // get current polygon mode
     GLint polygonMode[2];
     glGetIntegerv(GL_POLYGON_MODE, polygonMode);
@@ -237,4 +248,22 @@ void processInput(GLFWwindow* window)
     }
 
     tabPressedLastFrame = tabPressed;
+}
+
+void incrementMix(GLFWwindow* window, float &mixValue)
+{
+    static float mixIncrement = 0.01f;
+
+    if(glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS)
+    {
+        mixValue += mixIncrement;
+        if(mixValue > 1.0f)
+            mixValue = 1.0f;
+    }
+    else if(glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS)
+    {
+        mixValue -= mixIncrement;
+        if(mixValue < 0.0f)
+            mixValue = 0.0f;
+    }
 }
