@@ -108,6 +108,9 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT);
 
         // use shader program and rebind vertex array object (also binds VBO and vertex attributes)
+        float offset = 0.5f;
+        shader.setFloat("offset", offset);
+
         shader.use();
         glBindVertexArray(VAO);
         glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, 0); // uses currently bound VAO
