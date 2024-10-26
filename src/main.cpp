@@ -16,6 +16,7 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void escInput(GLFWwindow* window);
 void tabInput(GLFWwindow* window);
 void incrementMix(GLFWwindow* window, float &mixValue);
+void setTexture(unsigned int &texture, const char* path);
 
 
 // settings
@@ -88,7 +89,7 @@ int main()
     glGenBuffers(1, &VBO);
     glGenBuffers(1, &EBO);
 
-    // Triangle setup
+    // setup
     // --------------------
     glBindVertexArray(VAO);
 
@@ -171,17 +172,17 @@ int main()
     stbi_image_free(data);
 
     // set texture units for each sampler
-
     shader.use();
     shader.setInt("tex1", 0); // set tex1 to use texture unit 0
     shader.setInt("tex2", 1); // set tex2 to use texture unit 1
 
-    static float mixValue = 0.2f;
 
     // -------------TRANSFORMATION MATRICES----------------- 
     
     while(!glfwWindowShouldClose(window))
     {
+        static float mixValue = 0.2f;
+
         // ----------------- INPUT -----------------
         escInput(window);
         tabInput(window);
@@ -197,22 +198,32 @@ int main()
         glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, texture2);
 
-        shader.use();
-
         // set mix value
         shader.setFloat("mixValue", mixValue);
 
-        // set transformation matrix
-        glm::mat4 trans(1.0f); // initialise to identity matrix
-        trans = glm::translate(trans, glm::vec3(0.5f, 0.5f, 0.0f));
-        trans = glm::rotate(trans, (float)glfwGetTime(), glm::vec3(0.0, 0.0, 1.0));
-        trans = glm::scale(trans, glm::vec3(0.5, 0.5, 0.5));   
-
+        // set transformation uniform
         unsigned int transformLoc = glGetUniformLocation(shader.ID,"transform");
+    
+        // ----------------CONTAINER 1----------------
+        glm::mat4 trans(1.0f); // initialise to identity matrix
+        trans = glm::rotate(trans, (float)glfwGetTime(), glm::vec3(0.0, 0.0, 1.0));
+        trans = glm::translate(trans, glm::vec3(0.5f, 0.5f, 0.0f));
+        trans = glm::rotate(trans, (float)glfwGetTime() * 2, glm::vec3(0.0, 1.0, 1.0));
+
         glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans));
 
         glBindVertexArray(VAO);
-        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0); // uses currently bound VAO
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+
+        // ----------------CONTAINER 2----------------
+        trans = glm::mat4(1.0f); // initialise to identity
+        trans = glm::translate(trans, glm::vec3(-0.5f, -0.5f, 0.0f));
+        float scaleAmount = sin(glfwGetTime());
+        trans = glm::scale(trans, glm::vec3(scaleAmount, scaleAmount, scaleAmount));
+
+        glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans));
+
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
         // ----------------- SWAP BUFFERS AND POLL EVENTS -----------------
         glfwSwapBuffers(window);
@@ -281,4 +292,32 @@ void incrementMix(GLFWwindow* window, float &mixValue)
         if(mixValue < 0.0f)
             mixValue = 0.0f;
     }
+}
+
+void SetTexture(unsigned int &texture, const char* path)
+{
+    glGenTextures(1, &texture);
+    glBindTexture(GL_TEXTURE_2D, texture);
+
+    // set the texture wrapping/filtering options (on currently bound texture)
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+    // load the texture image and generate texture and mipmaps
+    int height, width, nrChannels;
+    unsigned char* data = stbi_load(path, &width, &height, &nrChannels, 0);
+
+    if(data)
+    {
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+        glGenerateMipmap(GL_TEXTURE_2D);
+    }
+    else
+    {
+        std::cout << "Failed to load texture" << std::endl;
+    }
+
+    stbi_image_free(data);
 }
