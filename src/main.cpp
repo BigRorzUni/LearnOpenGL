@@ -177,6 +177,8 @@ int main()
     shader.setInt("tex2", 1); // set tex2 to use texture unit 1
 
     static float mixValue = 0.2f;
+
+    // -------------TRANSFORMATION MATRICES----------------- 
     
     while(!glfwWindowShouldClose(window))
     {
@@ -199,6 +201,15 @@ int main()
 
         // set mix value
         shader.setFloat("mixValue", mixValue);
+
+        // set transformation matrix
+        glm::mat4 trans(1.0f); // initialise to identity matrix
+        trans = glm::translate(trans, glm::vec3(0.5f, 0.5f, 0.0f));
+        trans = glm::rotate(trans, (float)glfwGetTime(), glm::vec3(0.0, 0.0, 1.0));
+        trans = glm::scale(trans, glm::vec3(0.5, 0.5, 0.5));   
+
+        unsigned int transformLoc = glGetUniformLocation(shader.ID,"transform");
+        glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans));
 
         glBindVertexArray(VAO);
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0); // uses currently bound VAO

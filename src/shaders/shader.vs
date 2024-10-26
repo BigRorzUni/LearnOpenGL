@@ -7,11 +7,11 @@ layout (location = 2) in vec2 aTexCoord; // texture coordinates has attribute po
 out vec3 ourColour;
 out vec2 texCoord;
 
-uniform float offset;
+uniform mat4 transform;
 
 void main()
 {
-    gl_Position = vec4(aPos.x + offset, aPos.y, aPos.z, 1.0);
+    gl_Position = transform * vec4(aPos, 1.0); // apply transformation to position
     ourColour = aColour;
     texCoord = aTexCoord;
 }
