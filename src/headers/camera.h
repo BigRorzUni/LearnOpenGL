@@ -65,8 +65,10 @@ class Camera
 
         glm::mat4 GetViewMatrix()
         {
-            // constructing my own matrix
+            // using glm::lookAt
+            return glm::lookAt(Position, Position + Front, Up);
 
+            // constructing the matrix manually
             // method 1
             /*
             glm::mat4 view(1.0f);
@@ -88,6 +90,7 @@ class Camera
             */
 
             // method 2
+            /*
             glm::mat4 translation = glm::mat4(1.0f); // translating to camera position
 
             translation[3][0] = -Position.x;
@@ -109,11 +112,7 @@ class Camera
             rotation[2][2] = -Front.z;
 
             return rotation * translation; // translate then rotate and we have the view matrix
-
-
-
-
-            //return glm::lookAt(Position, Position + Front, Up);
+            */
         }
 
         // processes input received from any keyboard-like input system. 
