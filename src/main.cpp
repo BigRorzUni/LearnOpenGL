@@ -121,6 +121,20 @@ int main()
         
     };
 
+    glm::vec3 cubePositions[] = 
+    {
+        glm::vec3( 0.0f, 0.0f, 0.0f),
+        glm::vec3( 2.0f, 5.0f, -15.0f),
+        glm::vec3(-1.5f, -2.2f, -2.5f),
+        glm::vec3(-3.8f, -2.0f, -12.3f),
+        glm::vec3( 2.4f, -0.4f, -3.5f),
+        glm::vec3(-1.7f, 3.0f, -7.5f),
+        glm::vec3( 1.3f, -2.0f, -2.5f),
+        glm::vec3( 1.5f, 2.0f, -2.5f),
+        glm::vec3( 1.5f, 0.2f, -1.5f),
+        glm::vec3(-1.3f, 1.0f, -1.5f)
+    };
+
     // ----------------- VERTEX BUFFER AND ATTRIBUTES -----------------
     
     unsigned int VBO, VAO, EBO;
@@ -217,7 +231,20 @@ int main()
 
     // it's often best practice to set projection matrix outside the main loop only once as it rarely changes
     shader.setMat4("projection", projection); 
-    
+
+    // ----------------- ROTATION AXIS -----------------
+
+    glm::vec3 rotationAxes[10];
+
+    for (int i = 0; i < 10; ++i) 
+        rotationAxes[i] = glm::vec3
+        (
+            static_cast<float>(rand()) / static_cast<float>(RAND_MAX),
+            static_cast<float>(rand()) / static_cast<float>(RAND_MAX),
+            static_cast<float>(rand()) / static_cast<float>(RAND_MAX)
+        );
+
+    // ----------------- RENDER LOOP -----------------
     while(!glfwWindowShouldClose(window))
     {
         static float mixValue = 0.2f;
@@ -243,21 +270,29 @@ int main()
         // pass mixValue to shader
         shader.setFloat("mixValue", mixValue);
       
-        // create transformations
-        glm::mat4 model = glm::mat4(1.0f); 
+        // create and link view transformation
         glm::mat4 view = glm::mat4(1.0f);
-
-        // transform model
-        model = glm::rotate(model, (float)glfwGetTime() * glm::radians(50.0f), glm::vec3(0.5f, 1.0f, 0.0f)); // rotate around x-axis
         view  = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f)); // move camera back 3 units
-
-        // link matrices to their uniforms in vertex shader
-        shader.setMat4("model", model);
         shader.setMat4("view", view);
 
-        // draw container
+        // bind VAO
         glBindVertexArray(VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 36);
+
+        // render each model
+        for(unsigned int i = 0; i < 10; i++)
+        {
+            // calculate the model matrix for each object and pass it to shader before drawing
+            glm::mat4 model(1.0f);
+            model = glm::translate(model, cubePositions[i]);
+
+            float angle = 20.0f * glfwGetTime() * (i + 1) / 2.0f;
+
+            model = glm::rotate(model, glm::radians(angle), rotationAxes[i]);
+
+            shader.setMat4("model", model);
+
+            glDrawArrays(GL_TRIANGLES, 0, 36);
+        }
 
         // ----------------- SWAP BUFFERS AND POLL EVENTS -----------------
         glfwSwapBuffers(window);
