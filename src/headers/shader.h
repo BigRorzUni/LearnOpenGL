@@ -121,19 +121,9 @@ class Shader
             glUniform1f(glGetUniformLocation(ID, name.c_str()), value); 
         }
         // ------------------------------------------------------------------------
-        void setFloat2(const std::string &name, float value1, float value2) const
-        { 
-            glUniform2f(glGetUniformLocation(ID, name.c_str()), value1, value2); 
-        }
-        // ------------------------------------------------------------------------
-        void setFloat3(const std::string &name, float value1, float value2, float value3) const
-        { 
-            glUniform3f(glGetUniformLocation(ID, name.c_str()), value1, value2, value3); 
-        }
-        // ------------------------------------------------------------------------
-        void setFloat4(const std::string &name, float value1, float value2, float value3, float value4) const
-        { 
-            glUniform4f(glGetUniformLocation(ID, name.c_str()), value1, value2, value3, value4); 
+        void setMat4(const std::string &name, glm::mat4 value) const
+        {
+            glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, glm::value_ptr(value));
         }
 
     private:

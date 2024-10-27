@@ -177,7 +177,12 @@ int main()
     shader.setInt("tex2", 1); // set tex2 to use texture unit 1
 
 
-    // -------------TRANSFORMATION MATRICES----------------- 
+    // -------------PROJECTION MATRIX-----------------
+    glm::mat4 projection = glm::mat4(1.0f);
+     projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f); // perspective projection
+
+    // it's often best practice to set projection matrix outside the main loop only once as it rarely changes
+    shader.setMat4("projection", projection); 
     
     while(!glfwWindowShouldClose(window))
     {
@@ -198,31 +203,29 @@ int main()
         glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, texture2);
 
-        // set mix value
+        // activate shader
+        shader.use();
+
+        // pass mixValue to shader
         shader.setFloat("mixValue", mixValue);
+      
+        // create transformations
+        glm::mat4 model = glm::mat4(1.0f); 
+        glm::mat4 view = glm::mat4(1.0f);
 
-        // set transformation uniform
-        unsigned int transformLoc = glGetUniformLocation(shader.ID,"transform");
-    
-        // ----------------CONTAINER 1----------------
-        glm::mat4 trans(1.0f); // initialise to identity matrix
-        trans = glm::rotate(trans, (float)glfwGetTime(), glm::vec3(0.0, 0.0, 1.0));
-        trans = glm::translate(trans, glm::vec3(0.5f, 0.5f, 0.0f));
-        trans = glm::rotate(trans, (float)glfwGetTime() * 2, glm::vec3(0.0, 1.0, 1.0));
 
-        glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans));
+        // transform model
+        float t = glfwGetTime();
 
+        model = glm::rotate(model, glm::radians(sin(t) * 60.0f), glm::vec3(1.0f, 0.0f, 0.0f)); // rotate around x-axis
+        view  = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f)); // move camera back 3 units
+
+        // link matrices to their uniforms in vertex shader
+        shader.setMat4("model", model);
+        shader.setMat4("view", view);
+
+        // draw container
         glBindVertexArray(VAO);
-        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-
-        // ----------------CONTAINER 2----------------
-        trans = glm::mat4(1.0f); // initialise to identity
-        trans = glm::translate(trans, glm::vec3(-0.5f, -0.5f, 0.0f));
-        float scaleAmount = sin(glfwGetTime());
-        trans = glm::scale(trans, glm::vec3(scaleAmount, scaleAmount, scaleAmount));
-
-        glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans));
-
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
         // ----------------- SWAP BUFFERS AND POLL EVENTS -----------------
