@@ -71,6 +71,7 @@ int main()
 
     float vertices[] = 
     {
+        // positions        // texture coords
         -0.5f, -0.5f, -0.5f, 0.0f, 0.0f,
         0.5f, -0.5f, -0.5f, 1.0f, 0.0f,
         0.5f, 0.5f, -0.5f, 1.0f, 1.0f,
@@ -272,7 +273,7 @@ int main()
       
         // create and link view transformation
         glm::mat4 view = glm::mat4(1.0f);
-        view  = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f)); // move camera back 3 units
+        view  = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.5f)); // move camera back 5 units
         shader.setMat4("view", view);
 
         // bind VAO
@@ -285,9 +286,11 @@ int main()
             glm::mat4 model(1.0f);
             model = glm::translate(model, cubePositions[i]);
 
-            float angle = 20.0f * glfwGetTime() * (i + 1) / 2.0f;
-
-            model = glm::rotate(model, glm::radians(angle), rotationAxes[i]);
+            // only actively rotate every 3rd cube
+            if(i % 3 == 0)
+                model = glm::rotate(model, (float)glfwGetTime() * glm::radians(20.0f) * (i + 1), rotationAxes[i]);
+            else
+                model = glm::rotate(model, glm::radians(20.0f) * (i + 1), rotationAxes[i]);
 
             shader.setMat4("model", model);
 
