@@ -7,9 +7,7 @@ in vec2 texCoord;
 uniform sampler2D tex1;
 uniform sampler2D tex2;
 
-uniform float mixValue;
-
 void main()
 {
-    fragColour = mix(texture(tex1, texCoord), texture(tex2, texCoord), mixValue);
+    fragColour = mix(texture(tex1, texCoord), texture(tex2, texCoord), 0.2);
 }

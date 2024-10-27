@@ -15,17 +15,24 @@
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void escInput(GLFWwindow* window);
 void tabInput(GLFWwindow* window);
-void incrementMix(GLFWwindow* window, float &mixValue);
-void setTexture(unsigned int &texture, const char* path);
-
+void cameraInput(GLFWwindow* window);
 
 // settings
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
+// ----------------- CAMERA INIT -----------------
+glm::vec3 cameraPos(0.0f, 0.0f, 3.0f);
+glm::vec3 cameraFront(0.0f, 0.0f, -1.0f);
+glm::vec3 cameraUp(0.0f, 1.0f, 0.0f);
+
+float deltaTime = 0.0f; // Time between current frame and last frame
+float lastFrame = 0.0f; // Time of last frame
 
 int main()
 {
+    #pragma region Initialisation
+
     // ----------------- GLFW -----------------
     // initialise and configure glfw
     if (!glfwInit())
@@ -60,6 +67,8 @@ int main()
         glfwTerminate();
         return -1;
     }
+
+    #pragma endregion
 
     // -------------- ENABLE DEPTH TESTING --------------
     glEnable(GL_DEPTH_TEST);
@@ -138,6 +147,8 @@ int main()
 
     // ----------------- VERTEX BUFFER AND ATTRIBUTES -----------------
     
+    #pragma region VAO and VBO
+
     unsigned int VBO, VAO, EBO;
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
@@ -164,7 +175,10 @@ int main()
     glBindVertexArray(0);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 
+    #pragma endregion
+
     // ----------------- TEXTURE -----------------
+    #pragma region Texture
     unsigned int texture1, texture2;
 
     stbi_set_flip_vertically_on_load(true); // flip textures so they are the right way up
@@ -219,12 +233,13 @@ int main()
     }
 
     stbi_image_free(data);
-
+    
     // set texture units for each sampler
     shader.use();
     shader.setInt("tex1", 0); // set tex1 to use texture unit 0
     shader.setInt("tex2", 1); // set tex2 to use texture unit 1
 
+    #pragma endregion
 
     // -------------PROJECTION MATRIX-----------------
     glm::mat4 projection = glm::mat4(1.0f);
@@ -248,12 +263,15 @@ int main()
     // ----------------- RENDER LOOP -----------------
     while(!glfwWindowShouldClose(window))
     {
-        static float mixValue = 0.2f;
+        // ----------------- DELTA TIME -----------------
+        float currentFrame = glfwGetTime();
+        deltaTime = currentFrame - lastFrame;
+        lastFrame = currentFrame;
 
         // ----------------- INPUT -----------------
         escInput(window);
         tabInput(window);
-        incrementMix(window, mixValue);
+        cameraInput(window);
 
         // ----------------- RENDERING -----------------
         glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
@@ -267,13 +285,16 @@ int main()
 
         // activate shader
         shader.use();
-
-        // pass mixValue to shader
-        shader.setFloat("mixValue", mixValue);
       
-        // create and link view transformation
-        glm::mat4 view = glm::mat4(1.0f);
-        view  = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.5f)); // move camera back 5 units
+        // apply camera transformations to view
+        glm::mat4 view;
+        view = glm::lookAt
+        (
+            cameraPos,
+            cameraPos + cameraFront,
+            cameraUp
+        );
+
         shader.setMat4("view", view);
 
         // bind VAO
@@ -321,10 +342,7 @@ void escInput(GLFWwindow* window)
 {
     // escape to exit
     if(glfwGetKey(window, GLFW_KEY_ESCAPE))
-    {
         glfwSetWindowShouldClose(window, true);
-        return;
-    }
 }
 
 void tabInput(GLFWwindow* window)
@@ -348,48 +366,18 @@ void tabInput(GLFWwindow* window)
     tabPressedLastFrame = tabPressed;
 }
 
-void incrementMix(GLFWwindow* window, float &mixValue)
+void cameraInput(GLFWwindow* window)
 {
-    static float mixIncrement = 0.01f;
+    glm::vec3 cameraRight = glm::normalize(glm::cross(cameraFront, cameraUp));
 
-    if(glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS)
-    {
-        mixValue += mixIncrement;
-        if(mixValue > 1.0f)
-            mixValue = 1.0f;
-    }
-    else if(glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS)
-    {
-        mixValue -= mixIncrement;
-        if(mixValue < 0.0f)
-            mixValue = 0.0f;
-    }
-}
-
-void SetTexture(unsigned int &texture, const char* path)
-{
-    glGenTextures(1, &texture);
-    glBindTexture(GL_TEXTURE_2D, texture);
-
-    // set the texture wrapping/filtering options (on currently bound texture)
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-    // load the texture image and generate texture and mipmaps
-    int height, width, nrChannels;
-    unsigned char* data = stbi_load(path, &width, &height, &nrChannels, 0);
-
-    if(data)
-    {
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-        glGenerateMipmap(GL_TEXTURE_2D);
-    }
-    else
-    {
-        std::cout << "Failed to load texture" << std::endl;
-    }
-
-    stbi_image_free(data);
+    // camera controls
+    float cameraSpeed = 2.5f * deltaTime;
+    if(glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+        cameraPos += cameraSpeed * cameraFront;
+    if(glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+        cameraPos -= cameraSpeed * cameraFront;
+    if(glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+        cameraPos -= cameraRight * cameraSpeed;
+    if(glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+        cameraPos += cameraRight * cameraSpeed;
 }
