@@ -66,6 +66,9 @@ class Camera
         glm::mat4 GetViewMatrix()
         {
             // constructing my own matrix
+
+            // method 1
+            /*
             glm::mat4 view(1.0f);
 
             view[0][0] = Right.x;
@@ -82,6 +85,33 @@ class Camera
             view[3][2] = glm::dot(Front, Position);
 
             return view;
+            */
+
+            // method 2
+            glm::mat4 translation = glm::mat4(1.0f); // translating to camera position
+
+            translation[3][0] = -Position.x;
+            translation[3][1] = -Position.y;
+            translation[3][2] = -Position.z;
+
+            glm::mat4 rotation = glm::mat4(1.0f); // rotating to camera orientation
+
+            rotation[0][0] = Right.x;
+            rotation[1][0] = Right.y;
+            rotation[2][0] = Right.z;
+
+            rotation[0][1] = Up.x;
+            rotation[1][1] = Up.y;
+            rotation[2][1] = Up.z;
+
+            rotation[0][2] = -Front.x;
+            rotation[1][2] = -Front.y;
+            rotation[2][2] = -Front.z;
+
+            return rotation * translation; // translate then rotate and we have the view matrix
+
+
+
 
             //return glm::lookAt(Position, Position + Front, Up);
         }
