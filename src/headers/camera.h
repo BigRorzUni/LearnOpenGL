@@ -72,15 +72,21 @@ class Camera
         void ProcessKeyboard(Camera_Movement direction, float deltaTime)
         {
             float velocity = MovementSpeed * deltaTime;
+            glm::vec3 moveDirection(0.0f);
 
             if(direction == FORWARD)
-                Position += Front * velocity;
+                moveDirection += Front;
             if(direction == BACKWARD)
-                Position -= Front * velocity;
+                moveDirection -= Front;
             if(direction == LEFT)
-                Position -= Right * velocity;
+                moveDirection -= Right;
             if(direction == RIGHT)
-                Position += Right * velocity;
+                moveDirection += Right;
+
+            // lock movement to x and z axis by removing the amount of movedirection that is in the up direction
+            moveDirection -= glm::dot(moveDirection, WorldUp) * WorldUp;
+
+            Position += glm::normalize(moveDirection) * velocity;
         }
 
         // processes input received from a mouse input system. Expects the offset value in both the x and y direction.
