@@ -65,7 +65,25 @@ class Camera
 
         glm::mat4 GetViewMatrix()
         {
-            return glm::lookAt(Position, Position + Front, Up);
+            // constructing my own matrix
+            glm::mat4 view(1.0f);
+
+            view[0][0] = Right.x;
+            view[1][0] = Right.y; 
+            view[2][0] = Right.z;
+            view[0][1] = Up.x;
+            view[1][1] = Up.y;
+            view[2][1] = Up.z;
+            view[0][2] = -Front.x;
+            view[1][2] = -Front.y;
+            view[2][2] = -Front.z;
+            view[3][0] = -glm::dot(Right, Position);
+            view[3][1] = -glm::dot(Up, Position);
+            view[3][2] = glm::dot(Front, Position);
+
+            return view;
+
+            //return glm::lookAt(Position, Position + Front, Up);
         }
 
         // processes input received from any keyboard-like input system. 
