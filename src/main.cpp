@@ -7,6 +7,7 @@
 #include <glm/gtc/type_ptr.hpp>
 
 #include "headers/shader.h"
+#include "headers/camera.h"
 
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb_image.h>
@@ -25,16 +26,7 @@ const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
 // ----------------- CAMERA INIT -----------------
-glm::vec3 cameraPos(0.0f, 0.0f, 3.0f);
-glm::vec3 cameraFront(0.0f, 0.0f, -1.0f);
-glm::vec3 cameraUp(0.0f, 1.0f, 0.0f);
-
-float pitch = 0.0f;
-float yaw = -90.0f;
-
-float fov = 45.0f;
-
-// ----------------- MOUSE INIT -----------------
+Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
 float lastX = SCR_WIDTH/2, lastY = SCR_HEIGHT/2;
 bool firstMouse = true; // initially true to prevent camera jump on first mouse movement
 
@@ -302,19 +294,13 @@ int main()
         shader.use();
 
         // -------------VIEW MATRIX-----------------
-        glm::mat4 view;
-        view = glm::lookAt
-        (
-            cameraPos,
-            cameraPos + cameraFront,
-            cameraUp
-        );
+        glm::mat4 view = camera.GetViewMatrix();
 
         shader.setMat4("view", view);
 
         // -------------PROJECTION MATRIX-----------------
         glm::mat4 projection = glm::mat4(1.0f);
-        projection = glm::perspective(glm::radians(fov), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f); // perspective projection
+        projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f); // perspective projection
 
         // it's often best practice to set projection matrix outside the main loop only once as it rarely changes
         shader.setMat4("projection", projection); 
@@ -354,62 +340,7 @@ int main()
     return 0;
 }
 
-// ----------------- CALLBACKS -----------------
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)
-{
-    glViewport(0, 0, width, height);
-}
-
-void mouse_callback(GLFWwindow* window, double xpos, double ypos)
-{
-    if(firstMouse)
-    {
-        lastX = xpos;
-        lastY = ypos;
-        firstMouse = false;
-    }
-
-    float xOffset, yOffset;
-
-    xOffset = xpos - lastX;
-    yOffset = lastY - ypos; // reversed since y-coordinates range from bottom to top
-    lastX = xpos;
-    lastY = ypos;
-
-    const float sensitivity = 0.1f;
-    xOffset *= sensitivity;
-    yOffset *= sensitivity;
-
-    yaw += xOffset;
-    pitch += yOffset;
-
-    // clamp pitch so camera doesn't flip
-    if(pitch > 89.0f)
-        pitch = 89.0f;
-    if(pitch < -89.0f)
-        pitch = -89.0f;
-    
-    // point camera in new direction
-    glm::vec3 direction;
-    direction.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
-    direction.y = sin(glm::radians(pitch));
-    direction.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
-    cameraFront = glm::normalize(direction);
-}
-
-void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
-{
-    fov -= (float)yoffset;
-
-    // clamp fov/zoom
-    if (fov < 1.0f)
-        fov = 1.0f;
-
-    if (fov > 45.0f)
-        fov = 45.0f;
-}
-
-// ----------------- INPUT -----------------
+// ----------------- PROCESS INPUT -----------------
 void escInput(GLFWwindow* window)
 {
     // escape to exit
@@ -440,16 +371,46 @@ void tabInput(GLFWwindow* window)
 
 void cameraInput(GLFWwindow* window)
 {
-    glm::vec3 cameraRight = glm::normalize(glm::cross(cameraFront, cameraUp));
-
-    // camera controls
-    float cameraSpeed = 2.5f * deltaTime;
     if(glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-        cameraPos += cameraSpeed * cameraFront;
+        camera.ProcessKeyboard(FORWARD, deltaTime);
     if(glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-        cameraPos -= cameraSpeed * cameraFront;
+        camera.ProcessKeyboard(BACKWARD, deltaTime);
     if(glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-        cameraPos -= cameraRight * cameraSpeed;
+        camera.ProcessKeyboard(LEFT, deltaTime);
     if(glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-        cameraPos += cameraRight * cameraSpeed;
+        camera.ProcessKeyboard(RIGHT, deltaTime);
+}
+
+// ----------------- CALLBACKS -----------------
+void framebuffer_size_callback(GLFWwindow* window, int width, int height)
+{
+    glViewport(0, 0, width, height);
+}
+
+void mouse_callback(GLFWwindow* window, double xposIn, double yposIn)
+{
+    float xpos = static_cast<float>(xposIn);
+    float ypos = static_cast<float>(yposIn);
+
+    if(firstMouse)
+    {
+        lastX = xpos;
+        lastY = ypos;
+        firstMouse = false;
+    }
+
+    float xOffset, yOffset;
+
+    xOffset = xpos - lastX;
+    yOffset = lastY - ypos; // reversed since y-coordinates range from bottom to top
+    
+    lastX = xpos;
+    lastY = ypos;
+
+    camera.ProcessMouseMovement(xOffset, yOffset);
+}
+
+void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
+{
+    camera.ProcessMouseScroll(static_cast<float>(yoffset));
 }
