@@ -13,11 +13,14 @@
 
 // prototypes
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
+void mouse_callback(GLFWwindow* window, double xpos, double ypos);
+void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
+
 void escInput(GLFWwindow* window);
 void tabInput(GLFWwindow* window);
 void cameraInput(GLFWwindow* window);
 
-// settings
+// -------------- WINDOW SETTINGS ----------------
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
@@ -26,12 +29,23 @@ glm::vec3 cameraPos(0.0f, 0.0f, 3.0f);
 glm::vec3 cameraFront(0.0f, 0.0f, -1.0f);
 glm::vec3 cameraUp(0.0f, 1.0f, 0.0f);
 
+float pitch = 0.0f;
+float yaw = -90.0f;
+
+float fov = 45.0f;
+
+// ----------------- MOUSE INIT -----------------
+float lastX = SCR_WIDTH/2, lastY = SCR_HEIGHT/2;
+bool firstMouse = true; // initially true to prevent camera jump on first mouse movement
+
+// ----------------- TIME INIT -----------------
 float deltaTime = 0.0f; // Time between current frame and last frame
 float lastFrame = 0.0f; // Time of last frame
 
 int main()
 {
-    #pragma region Initialisation
+    // ----------------- INIT -----------------
+    #pragma region GLFW & GLAD Initialisation
 
     // ----------------- GLFW -----------------
     // initialise and configure glfw
@@ -41,10 +55,11 @@ int main()
         return -1;
     }
     
+    // set OpenGL version to 3.3
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // for MacOS
     
     // create a window
     GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "Learn OpenGL", NULL, NULL);
@@ -55,11 +70,18 @@ int main()
         return -1;
     }
     
+    // make the window the current context
     glfwMakeContextCurrent(window);
+
+    // set the callback functions
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    glfwSetCursorPosCallback(window, mouse_callback);
+    glfwSetScrollCallback(window, scroll_callback);
+
+    // locks cursor to window and hides it
+    glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
     // ----------------- GLAD -----------------
-
     // initialise GLAD (load OpenGL function pointers)
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
     {
@@ -241,13 +263,6 @@ int main()
 
     #pragma endregion
 
-    // -------------PROJECTION MATRIX-----------------
-    glm::mat4 projection = glm::mat4(1.0f);
-    projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f); // perspective projection
-
-    // it's often best practice to set projection matrix outside the main loop only once as it rarely changes
-    shader.setMat4("projection", projection); 
-
     // ----------------- ROTATION AXIS -----------------
 
     glm::vec3 rotationAxes[10];
@@ -285,8 +300,8 @@ int main()
 
         // activate shader
         shader.use();
-      
-        // apply camera transformations to view
+
+        // -------------VIEW MATRIX-----------------
         glm::mat4 view;
         view = glm::lookAt
         (
@@ -296,6 +311,13 @@ int main()
         );
 
         shader.setMat4("view", view);
+
+        // -------------PROJECTION MATRIX-----------------
+        glm::mat4 projection = glm::mat4(1.0f);
+        projection = glm::perspective(glm::radians(fov), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f); // perspective projection
+
+        // it's often best practice to set projection matrix outside the main loop only once as it rarely changes
+        shader.setMat4("projection", projection); 
 
         // bind VAO
         glBindVertexArray(VAO);
@@ -332,12 +354,62 @@ int main()
     return 0;
 }
 
-// methods
+// ----------------- CALLBACKS -----------------
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
     glViewport(0, 0, width, height);
 }
 
+void mouse_callback(GLFWwindow* window, double xpos, double ypos)
+{
+    if(firstMouse)
+    {
+        lastX = xpos;
+        lastY = ypos;
+        firstMouse = false;
+    }
+
+    float xOffset, yOffset;
+
+    xOffset = xpos - lastX;
+    yOffset = lastY - ypos; // reversed since y-coordinates range from bottom to top
+    lastX = xpos;
+    lastY = ypos;
+
+    const float sensitivity = 0.1f;
+    xOffset *= sensitivity;
+    yOffset *= sensitivity;
+
+    yaw += xOffset;
+    pitch += yOffset;
+
+    // clamp pitch so camera doesn't flip
+    if(pitch > 89.0f)
+        pitch = 89.0f;
+    if(pitch < -89.0f)
+        pitch = -89.0f;
+    
+    // point camera in new direction
+    glm::vec3 direction;
+    direction.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
+    direction.y = sin(glm::radians(pitch));
+    direction.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
+    cameraFront = glm::normalize(direction);
+}
+
+void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
+{
+    fov -= (float)yoffset;
+
+    // clamp fov/zoom
+    if (fov < 1.0f)
+        fov = 1.0f;
+
+    if (fov > 45.0f)
+        fov = 45.0f;
+}
+
+// ----------------- INPUT -----------------
 void escInput(GLFWwindow* window)
 {
     // escape to exit
