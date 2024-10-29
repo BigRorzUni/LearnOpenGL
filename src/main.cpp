@@ -38,6 +38,12 @@ float lastFrame = 0.0f; // Time of last frame
 glm::vec3 lightPos(1.0f, 0.5f, 0.0f);
 glm::vec3 cubePos(0.0f, -0.57f, -0.5f);
 
+void copyVec3ToArray(const glm::vec3& vec, float* array, int startIndex) {
+    array[startIndex] = vec.x;
+    array[startIndex + 1] = vec.y;
+    array[startIndex + 2] = vec.z;
+}
+
 int main()
 {
     chdir("..");
@@ -100,49 +106,88 @@ int main()
 
     float vertices[] = 
     {
-        // positions        // normals          // texture coords
-        -0.5f, -0.5f, -0.5f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f,
-        0.5f, -0.5f, -0.5f, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f,
-        0.5f, 0.5f, -0.5f, 0.0f, 0.0f, -1.0f, 1.0f, 1.0f,
-        0.5f, 0.5f, -0.5f, 0.0f, 0.0f, -1.0f, 1.0f, 1.0f,
-        -0.5f, 0.5f, -0.5f, 0.0f, 0.0f, -1.0f, 0.0f, 1.0f,
-        -0.5f, -0.5f, -0.5f, 0.0f, 0.0f, -1.0f, 0.0f, 0.0f,
+		/* 0, 1, 2, 3 */
+		 -0.5f, -0.5f, 0.5f , 
+		  0.5f, -0.5f, 0.5f ,
+		 -0.5f,  0.5f, 0.5f ,
+		  0.5f,  0.5f, 0.5f ,
 
-        -0.5f, -0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f,
-        0.5f, -0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f,
-        0.5f, 0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f,
-        0.5f, 0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f,
-        -0.5f, 0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f,
-        -0.5f, -0.5f, 0.5f, 0.0f, 0.0f, 1.0f, 0.0f, 0.0f,
+		 /* 4, 5, 6, 7 */
+		 -0.5f, -0.5f, -0.5f ,
+		  0.5f, -0.5f, -0.5f,
+		 -0.5f,  0.5f, -0.5f ,
+		  0.5f,  0.5f, -0.5f ,
+	};
 
-        -0.5f, 0.5f, 0.5f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f,
-        -0.5f, 0.5f, -0.5f, -1.0f, 0.0f, 0.0f, 1.0f, 1.0f,
-        -0.5f, -0.5f, -0.5f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f,
-        -0.5f, -0.5f, -0.5f, -1.0f, 0.0f, 0.0f, 0.0f, 1.0f,
-        -0.5f, -0.5f, 0.5f, -1.0f, 0.0f, 0.0f, 0.0f, 0.0f,
-        -0.5f, 0.5f, 0.5f, -1.0f, 0.0f, 0.0f, 1.0f, 0.0f,
+	int indices[] = 
+    {
+		0, 1, 3, /* front */
+		0, 3, 2,
+		
+		1, 5, 7, /* right */
+		1, 7, 3,
 
-        0.5f, 0.5f, 0.5f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f,
-        0.5f, 0.5f, -0.5f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f,
-        0.5f, -0.5f, -0.5f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f,
-        0.5f, -0.5f, -0.5f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f,
-        0.5f, -0.5f, 0.5f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f,
-        0.5f, 0.5f, 0.5f, 1.0f, 0.0f, 0.0f, 1.0f, 0.0f,
+		5, 4, 6, /* back */
+		5, 6, 7,
 
-        -0.5f, -0.5f, -0.5f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f,
-        0.5f, -0.5f, -0.5f, 0.0f, -1.0f, 0.0f, 1.0f, 1.0f,
-        0.5f, -0.5f, 0.5f, 0.0f, -1.0f, 0.0f, 1.0f, 0.0f,
-        0.5f, -0.5f, 0.5f, 0.0f, -1.0f, 0.0f, 1.0f, 0.0f,
-        -0.5f, -0.5f, 0.5f, 0.0f, -1.0f, 0.0f, 0.0f, 0.0f,
-        -0.5f, -0.5f, -0.5f, 0.0f, -1.0f, 0.0f, 0.0f, 1.0f,
+		4, 0, 2, /* left */
+		4, 2, 6,
 
-        -0.5f, 0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f,
-        0.5f, 0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 1.0f, 1.0f,
-        0.5f, 0.5f, 0.5f, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f,
-        0.5f, 0.5f, 0.5f, 0.0f, 1.0f, 0.0f, 1.0f, 0.0f,
-        -0.5f, 0.5f, 0.5f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f,
-        -0.5f, 0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f
-    };
+		4, 5, 1, /* bottom */
+		4, 1, 0,
+
+		2, 3, 7, /* top */
+		2, 7, 6,
+	};
+	
+	/* array to hold all vertex positions and normals */
+	float vertAttribs[sizeof(indices) / sizeof(int) * 2 * 6];
+
+    std::cout << "Size of vertices: " << sizeof(vertAttribs) / sizeof(float) << std::endl;
+    
+    int vertexAttribIndex = 0;
+    for (int i = 0; i < sizeof(indices)/sizeof(int); i += 3) 
+    {
+		int indiceA = indices[i];
+		int indiceB = indices[i+1];
+		int indiceC = indices[i+2];
+
+        std::cout << "Indice A: " << indiceA << std::endl;
+        std::cout << "Indice B: " << indiceB << std::endl;
+        std::cout << "Indice C: " << indiceC << std::endl;
+
+        glm::vec3 vertA = glm::vec3(vertices[indiceA*3], vertices[indiceA*3+1], vertices[indiceA*3+2]);
+        glm::vec3 vertB = glm::vec3(vertices[indiceB*3], vertices[indiceB*3+1], vertices[indiceB*3+2]);
+        glm::vec3 vertC = glm::vec3(vertices[indiceC*3], vertices[indiceC*3+1], vertices[indiceC*3+2]);
+
+        std::cout << "Vertex A: " << vertA.x << ", " << vertA.y << ", " << vertA.z << std::endl;
+        std::cout << "Vertex B: " << vertB.x << ", " << vertB.y << ", " << vertB.z << std::endl;
+        std::cout << "Vertex C: " << vertC.x << ", " << vertC.y << ", " << vertC.z << std::endl;
+		
+		glm::vec3 edgeAB = vertB - vertA;
+		glm::vec3 edgeAC = vertC - vertA;
+
+		glm::vec3 normal = glm::cross(edgeAB, edgeAC);
+
+		copyVec3ToArray(vertA, vertAttribs, vertexAttribIndex);
+        copyVec3ToArray(normal, vertAttribs, vertexAttribIndex + 3);
+
+        std::cout << "copied indice A to positions " << vertexAttribIndex << " to " << vertexAttribIndex + 6 << std::endl;
+        vertexAttribIndex += 6;
+
+        copyVec3ToArray(vertB, vertAttribs, vertexAttribIndex);
+        copyVec3ToArray(normal, vertAttribs, vertexAttribIndex + 3);
+
+        std::cout << "copied indice B to positions " << vertexAttribIndex << " to " << vertexAttribIndex + 6 << std::endl;
+        vertexAttribIndex += 6;
+
+        copyVec3ToArray(vertC, vertAttribs, vertexAttribIndex);
+        copyVec3ToArray(normal, vertAttribs, vertexAttribIndex + 3);
+
+        std::cout << "copied indice C to positions " << vertexAttribIndex << " to " << vertexAttribIndex + 6 << std::endl;
+        vertexAttribIndex += 6;
+	}
+
 
     // ----------------- OBJECT VERTEX BUFFER AND ATTRIBUTES -----------------
     
@@ -157,7 +202,7 @@ int main()
     // generate VBO
     glGenBuffers(1, &VBO);
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertAttribs), vertAttribs, GL_STATIC_DRAW);
 
     // generate EBO
     //glGenBuffers(1, &EBO);
@@ -165,16 +210,12 @@ int main()
     //glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
     
     // vertex attribute
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
 
     // normal attribute
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
     glEnableVertexAttribArray(1);
-
-    // texture attribute
-    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
-    glEnableVertexAttribArray(2);
 
     // unbind VBO and VAO to prevent accidental changes (not unbinding EBO because it is bound to VAO)
     glBindVertexArray(0);
@@ -194,7 +235,7 @@ int main()
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
 
     // vertex attribute
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
     
     // ----------------- TEXTURE -----------------
