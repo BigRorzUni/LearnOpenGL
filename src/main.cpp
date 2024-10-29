@@ -294,6 +294,7 @@ int main()
         cubeShader.setVec3("objectColour", 1.0f, 0.5f, 0.31f);
         cubeShader.setVec3("lightColour", 1.0f, 1.0f, 1.0f);
         cubeShader.setVec3("lightPos", lightPos);
+        cubeShader.setVec3("viewPos", camera.Position);
 
         // world transformations
         glm::mat4 model(1.0f);
