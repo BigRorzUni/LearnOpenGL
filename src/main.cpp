@@ -271,6 +271,8 @@ int main()
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
 
+        float timeValue = glfwGetTime();
+
         // ----------------- INPUT -----------------
         escInput(window);
         tabInput(window);
@@ -320,6 +322,12 @@ int main()
         lightingShader.use();
         lightingShader.setMat4("projection", projection);
         lightingShader.setMat4("view", view);
+
+        // move light
+        float radius = 2.0f; // Radius of the circle
+        float lightX = sin(timeValue) * radius;
+        float lightZ = cos(timeValue) * radius;
+        lightPos = glm::vec3(lightX, lightPos.y, lightZ);
 
         model = glm::mat4(1.0f);
         model = glm::translate(model, lightPos);
