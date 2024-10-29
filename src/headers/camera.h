@@ -131,7 +131,7 @@ class Camera
                 moveDirection += Right;
 
             // lock movement to x and z axis by removing the amount of movedirection that is in the up direction
-            moveDirection -= glm::dot(moveDirection, WorldUp) * WorldUp;
+            //moveDirection -= glm::dot(moveDirection, WorldUp) * WorldUp;
 
             Position += glm::normalize(moveDirection) * velocity;
         }
