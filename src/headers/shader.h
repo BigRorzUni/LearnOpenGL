@@ -18,7 +18,7 @@ class Shader
         Shader(const char* vertexPath, const char* fragmentPath)
         {
             // move working directory so it can access shaders easily
-            chdir("../src/shaders");
+            chdir("src/shaders");
 
             char cwd[1024];
             if (getcwd(cwd, sizeof(cwd)) != NULL) {
