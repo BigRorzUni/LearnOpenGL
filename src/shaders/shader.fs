@@ -7,9 +7,8 @@ uniform vec3 lightColour;
 uniform vec3 lightPos; // light position
 uniform vec3 viewPos; // camera position
 
-in vec3 Normal; // normal of the fragment
-in vec3 FragPos; // position of the fragment
-in vec3 result;
+in vec3 Normal; // normal of the fragment in view space
+in vec3 FragPos; // position of the fragment in view space
 
 void main()
 {
