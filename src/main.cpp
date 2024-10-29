@@ -300,7 +300,7 @@ int main()
 
 
         // material properties
-        glm::vec3 lightColour = glm::vec3(sin(glfwGetTime() * 2.0f), sin(glfwGetTime() * 0.7f), sin(glfwGetTime() * 1.3f));
+        glm::vec3 lightColour = glm::vec3(std::max((float)sin(glfwGetTime() * 2.0f), 0.5f), std::max((float)cos(glfwGetTime() * 0.7f), 0.5f), std::max((float)sin(glfwGetTime() * 1.3f), 0.5f));
         glm::vec3 diffuseColour = lightColour * glm::vec3(0.5f);
         glm::vec3 ambientColour = diffuseColour * glm::vec3(0.2f);
 

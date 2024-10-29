@@ -15,7 +15,7 @@ void main()
     gl_Position = projection * view * model * vec4(aPos, 1.0); // apply transformation to position
 
     // view space is used for consistency and because its faster to transform here than in fragment shader
-    FragPos = vec3(view * model * vec4(aPos, 1.0)); // view position of fragment
-    Normal = mat3(transpose(inverse(view * model))) * aNormal; // view position of normal
+    FragPos = vec3(model * vec4(aPos, 1.0)); // view position of fragment
+    Normal = mat3(transpose(inverse(model))) * aNormal; // view position of normal
                                                         // http://www.lighthouse3d.com/tutorials/glsl-12-tutorial/the-normal-matrix/
 }
