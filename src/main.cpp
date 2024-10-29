@@ -88,7 +88,7 @@ int main()
     glEnable(GL_DEPTH_TEST);
     
     // ----------------- SHADER PROGRAM -----------------
-    Shader shader("shader.vs", "shader.fs");
+    Shader lightingShader("shader.vs", "shader.fs");
 
     // ----------------- VERTEX DATA -----------------
 
@@ -159,26 +159,25 @@ int main()
         glm::vec3(-1.3f, 1.0f, -1.5f)
     };
 
-    // ----------------- VERTEX BUFFER AND ATTRIBUTES -----------------
+    // ----------------- OBJECT VERTEX BUFFER AND ATTRIBUTES -----------------
     
-    #pragma region VAO and VBO
+    #pragma region Object VAO and VBO
 
-    unsigned int VBO, VAO, EBO;
-    glGenVertexArrays(1, &VAO);
+    unsigned int lightVAO;
+    unsigned int VBO, EBO;
+
+    glGenVertexArrays(1, &lightVAO);
+    glBindVertexArray(lightVAO);
+
     glGenBuffers(1, &VBO);
-    glGenBuffers(1, &EBO);
-
-    // setup
-    // --------------------
-    glBindVertexArray(VAO);
-
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
+    glGenBuffers(1, &EBO);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
-
-    // position attribute
+    
+    // vertex attribute
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
     // texture coord attribute
@@ -191,6 +190,7 @@ int main()
 
     #pragma endregion
 
+    //
     // ----------------- TEXTURE -----------------
     #pragma region Texture
     unsigned int texture1, texture2;
@@ -247,11 +247,6 @@ int main()
     }
 
     stbi_image_free(data);
-    
-    // set texture units for each sampler
-    shader.use();
-    shader.setInt("tex1", 0); // set tex1 to use texture unit 0
-    shader.setInt("tex2", 1); // set tex2 to use texture unit 1
 
     #pragma endregion
 
@@ -266,6 +261,17 @@ int main()
             static_cast<float>(rand()) / static_cast<float>(RAND_MAX),
             static_cast<float>(rand()) / static_cast<float>(RAND_MAX)
         );
+
+    // ----------------- SET SHADER UNIFORMS -----------------
+        // set texture units for each sampler
+    lightingShader.use();
+    // lightingShader.setInt("tex1", 0); // set tex1 to use texture unit 0
+    // lightingShader.setInt("tex2", 1); // set tex2 to use texture unit 1
+
+    // lighting colours
+    lightingShader.setVec3("objectColour", 1.0f, 0.5f, 0.31f);
+    lightingShader.setVec3("lightColour", 1.0f, 1.0f, 1.0f);
+
 
     // ----------------- RENDER LOOP -----------------
     while(!glfwWindowShouldClose(window))
@@ -291,22 +297,22 @@ int main()
         glBindTexture(GL_TEXTURE_2D, texture2);
 
         // activate shader
-        shader.use();
+        lightingShader.use();
 
         // -------------VIEW MATRIX-----------------
         glm::mat4 view = camera.GetViewMatrix();
 
-        shader.setMat4("view", view);
+        lightingShader.setMat4("view", view);
 
         // -------------PROJECTION MATRIX-----------------
         glm::mat4 projection = glm::mat4(1.0f);
         projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f); // perspective projection
 
         // it's often best practice to set projection matrix outside the main loop only once as it rarely changes
-        shader.setMat4("projection", projection); 
+        lightingShader.setMat4("projection", projection); 
 
         // bind VAO
-        glBindVertexArray(VAO);
+        glBindVertexArray(lightVAO);
 
         // render each model
         for(unsigned int i = 0; i < 10; i++)
@@ -321,7 +327,7 @@ int main()
             else
                 model = glm::rotate(model, glm::radians(20.0f) * (i + 1), rotationAxes[i]);
 
-            shader.setMat4("model", model);
+            lightingShader.setMat4("model", model);
 
             glDrawArrays(GL_TRIANGLES, 0, 36);
         }
@@ -331,7 +337,7 @@ int main()
         glfwPollEvents();
     }
 
-    glDeleteVertexArrays(1, &VAO);
+    glDeleteVertexArrays(1, &lightVAO);
     glDeleteBuffers(1, &VBO);
     glDeleteBuffers(1, &EBO);
     
