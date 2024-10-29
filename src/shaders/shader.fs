@@ -9,6 +9,7 @@ uniform vec3 viewPos; // camera position
 
 in vec3 Normal; // normal of the fragment
 in vec3 FragPos; // position of the fragment
+in vec3 result;
 
 void main()
 {
