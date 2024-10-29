@@ -298,6 +298,22 @@ int main()
         cubeShader.setVec3("lightPos", lightPos);
         cubeShader.setVec3("viewPos", camera.Position);
 
+
+        // material properties
+        glm::vec3 lightColour = glm::vec3(sin(glfwGetTime() * 2.0f), sin(glfwGetTime() * 0.7f), sin(glfwGetTime() * 1.3f));
+        glm::vec3 diffuseColour = lightColour * glm::vec3(0.5f);
+        glm::vec3 ambientColour = diffuseColour * glm::vec3(0.2f);
+
+        cubeShader.setVec3("light.position", lightPos);
+        cubeShader.setVec3("light.ambient", ambientColour);
+        cubeShader.setVec3("light.diffuse", diffuseColour);
+        cubeShader.setVec3("light.specular", lightColour);
+
+        cubeShader.setVec3("material.ambient", 1.0f, 0.5f, 0.31f);
+        cubeShader.setVec3("material.diffuse", 1.0f, 0.5f, 0.31f);
+        cubeShader.setVec3("material.specular", 0.2f, 0.2f, 0.5f);
+        cubeShader.setFloat("material.shininess", 32.0f);
+
         // world transformations
         glm::mat4 model(1.0f);
         model = glm::translate(model, glm::vec3(cubePos));
