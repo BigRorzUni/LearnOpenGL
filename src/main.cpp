@@ -301,19 +301,6 @@ int main()
 
 
         // material properties
-        glm::vec3 lightColour;
-        lightColour.x = static_cast<float>(sin(glfwGetTime() * 2.0));
-        lightColour.y = static_cast<float>(sin(glfwGetTime() * 0.7));
-        lightColour.z = static_cast<float>(sin(glfwGetTime() * 1.3));
-
-        glm::vec3 diffuseColour = lightColour   * glm::vec3(0.5f); // decrease the influence
-        glm::vec3 ambientColour = diffuseColour * glm::vec3(0.2f); // low influence
-        glm::vec3 specularColour = lightColour * glm::max(glm::length(lightColour), 1.0f);
-
-        lightingShader.setVec3("light.ambient", ambientColour);
-        lightingShader.setVec3("light.diffuse", diffuseColour);
-        lightingShader.setVec3("light.specular", specularColour);
-
         lightingShader.setVec3("material.ambient", 1.0f, 0.5f, 0.31f);
         lightingShader.setVec3("material.diffuse", 1.0f, 0.5f, 0.31f);
         lightingShader.setVec3("material.specular", 0.5f, 0.5f, 0.5f);
@@ -344,7 +331,23 @@ int main()
         lightObjShader.setMat4("projection", projection);
         lightObjShader.setMat4("view", view);
 
+        // set light colour
+        glm::vec3 lightColour;
+        lightColour.x = static_cast<float>(sin(glfwGetTime() * 2.0));
+        lightColour.y = static_cast<float>(sin(glfwGetTime() * 0.7));
+        lightColour.z = static_cast<float>(sin(glfwGetTime() * 1.3));
+
+        // apply colour to the lamp object
         lightObjShader.setVec3("lightColour", lightColour);
+
+        // set light properties for the cube object
+        glm::vec3 diffuseColour = lightColour   * glm::vec3(0.5f); // decrease the influence
+        glm::vec3 ambientColour = diffuseColour * glm::vec3(0.2f); // low influence
+        glm::vec3 specularColour = lightColour * glm::max(glm::length(lightColour), 1.0f);
+
+        lightingShader.setVec3("light.ambient", ambientColour);
+        lightingShader.setVec3("light.diffuse", diffuseColour);
+        lightingShader.setVec3("light.specular", specularColour);
 
         // move light
         float radius = 2.0f; // Radius of the circle
