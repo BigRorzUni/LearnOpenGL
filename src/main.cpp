@@ -189,13 +189,26 @@ int main()
     // ----------------- TEXTURE -----------------
     unsigned int diffuseMap = loadTexture("assets/container2.png");
     unsigned int specularMap = loadTexture("assets/container2_specular.png");
-    unsigned int emissionMap = loadTexture("assets/matrix.jpg");
 
     // -------------------- SHADER CONFIG --------------------
     lightingShader.use(); 
     lightingShader.setInt("material.diffuse", 0); // set the texture to the first texture unit
     lightingShader.setInt("material.specular", 1); // set the texture to the second texture unit
-    lightingShader.setInt("material.emission", 2); // set the texture to the third texture unit
+
+    // ----------------- CUBE POSITIONS -----------------
+    glm::vec3 cubePositions[10] =
+    {
+        glm::vec3(0.0f, 0.0f, 0.0f),
+        glm::vec3(2.0f, 5.0f, -15.0f),
+        glm::vec3(-1.5f, -2.2f, -2.5f),
+        glm::vec3(-3.8f, -2.0f, -12.3f),
+        glm::vec3(2.4f, -0.4f, -3.5f),
+        glm::vec3(-1.7f, 3.0f, -7.5f),
+        glm::vec3(1.3f, -2.0f, -2.5f),
+        glm::vec3(1.5f, 2.0f, -2.5f),
+        glm::vec3(1.5f, 0.2f, -1.5f),
+        glm::vec3(-1.3f, 1.0f, -1.5f)
+    };
 
     // ----------------- RENDER LOOP -----------------
     while(!glfwWindowShouldClose(window))
@@ -219,7 +232,7 @@ int main()
         // ----------------- CUBE -----------------
         // activate shader on cube
         lightingShader.use();
-        lightingShader.setVec3("light.position", lightPos);
+        lightingShader.setVec3("light.direction", -0.2f, -1.0f, -0.3f);
         lightingShader.setVec3("viewPos", camera.Position);
 
         // lighting properties
@@ -251,13 +264,19 @@ int main()
         glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, specularMap);
 
-        // bind emission map
-        glActiveTexture(GL_TEXTURE2);
-        glBindTexture(GL_TEXTURE_2D, emissionMap);
-
         // render the cube
         glBindVertexArray(cubeVAO);
-        glDrawArrays(GL_TRIANGLES, 0, 36);
+        
+        for(unsigned int i = 0; i < 10; i++)
+        {
+            glm::mat4 model = glm::mat4(1.0f);
+            model = glm::translate(model, cubePositions[i]);
+            float angle = 20.0f * i;
+            model = glm::rotate(model, glm::radians(angle),
+            glm::vec3(1.0f, 0.3f, 0.5f));
+            lightingShader.setMat4("model", model);
+            glDrawArrays(GL_TRIANGLES, 0, 36);
+        }
 
         // ----------------- LIGHT -----------------
         // also draw the lamp object
@@ -270,8 +289,8 @@ int main()
         model = glm::scale(model, glm::vec3(0.2f)); // a smaller cube
         lightObjShader.setMat4("model", model);
 
-        glBindVertexArray(lightVAO);
-        glDrawArrays(GL_TRIANGLES, 0, 36);
+        //glBindVertexArray(lightVAO);
+        //glDrawArrays(GL_TRIANGLES, 0, 36);
 
         // ----------------- SWAP BUFFERS AND POLL EVENTS -----------------
         glfwSwapBuffers(window);
@@ -361,6 +380,8 @@ void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 {
     camera.ProcessMouseScroll(static_cast<float>(yoffset));
 }
+
+// ----------------- HELPERS -----------------
 
 unsigned int loadTexture(char const * path)
 {
