@@ -13,6 +13,10 @@ struct Material
 struct Light 
 {
     vec3 position;
+    vec3 direction;
+
+    float innerCutOff;
+    float outerCutOff;
 
     vec3 ambient;
     vec3 diffuse;
@@ -58,6 +62,16 @@ void main()
     diffuse *= attenuation;
     specular *= attenuation;
 
-    // combine
+    // check if in the spotlight
+    float theta = dot(lightDir, normalize(-light.direction));
+    float epsilon = light.innerCutOff - light.outerCutOff;
+    float intensity = clamp((theta - light.outerCutOff) / epsilon, 0.0, 1.0);
+
+    // leave ambient unaffected
+    diffuse *= intensity;
+    specular *= intensity;
+
+    // combine results
     FragColour = vec4(ambient + diffuse + specular, 1.0);
+
 }

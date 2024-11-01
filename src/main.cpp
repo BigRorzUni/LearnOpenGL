@@ -232,7 +232,14 @@ int main()
         // ----------------- CUBE -----------------
         // activate shader on cube
         lightingShader.use();
-        lightingShader.setVec3("light.position", lightPos);
+        lightingShader.setVec3("light.position", camera.Position);
+        lightingShader.setVec3("light.direction", camera.Front);
+
+        float innerCutOffAngle = glm::radians(12.5f);
+        lightingShader.setFloat("light.innerCutOff", glm::cos(innerCutOffAngle));
+        float outerCutOffAngle = glm::radians(17.5f);
+        lightingShader.setFloat("light.outerCutOff", glm::cos(outerCutOffAngle));
+
         lightingShader.setVec3("viewPos", camera.Position);
 
         // lighting properties
