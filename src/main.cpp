@@ -38,7 +38,6 @@ float lastFrame = 0.0f; // Time of last frame
 
 // ----------------- LIGHTING INIT -----------------
 glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
-glm::vec3 cubePos(0.0f);
 
 int main()
 {
@@ -220,7 +219,7 @@ int main()
 
     glm::vec3 pointLightColours[] =
     {
-        glm::vec3(1.0f, 0.6f, 0.1f),
+        glm::vec3(1.0f, 1.0f, 1.0f),
         glm::vec3(1.0f, 0.0f, 0.0f),
         glm::vec3(0.0f, 0.0f, 1.0f),
         glm::vec3(0.0f, 1.0f, 0.0f)
@@ -242,7 +241,7 @@ int main()
         cameraInput(window);
 
         // ----------------- RENDERING -----------------
-        glClearColor(0.6f, 0.3f, 0.05f, 0.5f);
+        glClearColor(0.1f, 0.1f, 0.1f, 0.1f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         // ----------------- CUBE -----------------
@@ -256,12 +255,13 @@ int main()
         lightingShader.setVec3("viewPos", camera.Position);
 
         // directional light
-        lightingShader.setVec3("dirLight.direction", -0.2f, -1.0f, -0.3f);
+        lightingShader.setVec3("dirLight.direction", 0.4f, -1.0f, -0.3f);
 
-        lightingShader.setVec3("dirLight.ambient", 0.06f, 0.02f, 0.05f);
-        lightingShader.setVec3("dirLight.diffuse", 0.6f, 0.2f, 0.05f);
+        lightingShader.setVec3("dirLight.ambient", 0.1f, 0.1f, 0.1f);
+        lightingShader.setVec3("dirLight.diffuse", 0.5f, 0.5f, 0.5f);
         lightingShader.setVec3("dirLight.specular", 0.5f, 0.5f, 0.5f);
 
+        /*
         // point lights
         for(unsigned int i = 0; i < 4; i++)
         {
@@ -293,10 +293,11 @@ int main()
         lightingShader.setFloat("spotLight.constant", 1.0f);
         lightingShader.setFloat("spotLight.linear", 0.09f);
         lightingShader.setFloat("spotLight.quadratic", 0.032f);
+        */
 
         // world transformations
         glm::mat4 model(1.0f);
-        model = glm::translate(model, glm::vec3(cubePos));
+        model = glm::translate(model, glm::vec3(cubePositions[0]));
         lightingShader.setMat4("model", model);
 
         // view transformations
@@ -315,9 +316,11 @@ int main()
         glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, specularMap);
 
-        // render the cube
+        // render the cube  
         glBindVertexArray(cubeVAO);
+        glDrawArrays(GL_TRIANGLES, 0, 36);
         
+        /*
         for(unsigned int i = 0; i < 10; i++)
         {
             glm::mat4 model = glm::mat4(1.0f);
@@ -326,15 +329,30 @@ int main()
             model = glm::rotate(model, glm::radians(angle),
             glm::vec3(1.0f, 0.3f, 0.5f));
             lightingShader.setMat4("model", model);
+
+            glBindVertexArray(cubeVAO);
             glDrawArrays(GL_TRIANGLES, 0, 36);
         }
+        */
 
         // ----------------- LIGHT -----------------
         // also draw the lamp object
+        /*
         lightObjShader.use();
         lightObjShader.setMat4("projection", projection);
         lightObjShader.setMat4("view", view);
 
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, pointLightPositions[0]);
+        model = glm::scale(model, glm::vec3(0.2f)); // a smaller cube
+        lightObjShader.setMat4("model", model);
+
+        lightObjShader.setVec3("lightColor", pointLightColours[0]);
+
+        glBindVertexArray(lightVAO);
+        glDrawArrays(GL_TRIANGLES, 0, 36);
+        */
+        /*
         for(unsigned int i = 0; i < 4; i++)
         {
             model = glm::mat4(1.0f);
@@ -347,6 +365,7 @@ int main()
             glBindVertexArray(lightVAO);
             glDrawArrays(GL_TRIANGLES, 0, 36);
         }
+        */
 
         // ----------------- SWAP BUFFERS AND POLL EVENTS -----------------
         glfwSwapBuffers(window);
