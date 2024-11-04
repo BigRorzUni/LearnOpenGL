@@ -1,13 +1,13 @@
 [
 {
   "directory": "/Users/bigrorz/LearnOpenGL/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -o CMakeFiles/Renderer.dir/src/main.cpp.o -c /Users/bigrorz/LearnOpenGL/src/main.cpp",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib -I/Users/bigrorz/LearnOpenGL/lib/glad/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glm/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -o CMakeFiles/Renderer.dir/src/main.cpp.o -c /Users/bigrorz/LearnOpenGL/src/main.cpp",
   "file": "/Users/bigrorz/LearnOpenGL/src/main.cpp",
   "output": "CMakeFiles/Renderer.dir/src/main.cpp.o"
 },
 {
   "directory": "/Users/bigrorz/LearnOpenGL/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -o CMakeFiles/Renderer.dir/lib/glad/src/glad.c.o -c /Users/bigrorz/LearnOpenGL/lib/glad/src/glad.c",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib -I/Users/bigrorz/LearnOpenGL/lib/glad/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glm/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk -o CMakeFiles/Renderer.dir/lib/glad/src/glad.c.o -c /Users/bigrorz/LearnOpenGL/lib/glad/src/glad.c",
   "file": "/Users/bigrorz/LearnOpenGL/lib/glad/src/glad.c",
   "output": "CMakeFiles/Renderer.dir/lib/glad/src/glad.c.o"
 },

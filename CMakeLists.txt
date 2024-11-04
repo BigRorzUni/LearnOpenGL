@@ -16,7 +16,11 @@ if(MSVC)
 endif()
 
 # Include GLAD directories
-include_directories("include")
+include_directories("lib")
+include_directories("lib/glad/include")
+include_directories("lib/glfw/include")
+include_directories("lib/glm/include")
+
 
 # Set source files
 set(SRC

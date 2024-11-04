@@ -94,8 +94,8 @@ CMakeFiles/Renderer.dir/lib/glad/src/glad.c.o: /Users/bigrorz/LearnOpenGL/lib/gl
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/wait.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stdbool.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stdint.h \
-  /Users/bigrorz/LearnOpenGL/include/KHR/khrplatform.h \
-  /Users/bigrorz/LearnOpenGL/include/glad/glad.h
+  /Users/bigrorz/LearnOpenGL/lib/glad/include/KHR/khrplatform.h \
+  /Users/bigrorz/LearnOpenGL/lib/glad/include/glad/glad.h
 
 CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/Availability.h \
@@ -1088,517 +1088,498 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stdint.h \
-  /Users/bigrorz/LearnOpenGL/include/KHR/khrplatform.h \
-  /Users/bigrorz/LearnOpenGL/include/glad/glad.h \
-  /Users/bigrorz/LearnOpenGL/include/glm/matrix.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat2x2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat2x3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat2x3.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat2x4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat2x4.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat3x2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat3x2.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat3x3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat3x3.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat3x4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat3x4.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat4x2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat4x2.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat4x3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat4x3.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat4x4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat4x4.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double2x3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double2x3_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double2x4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double2x4_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double3x2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double3x2_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double3x3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double3x3_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double3x4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double3x4_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double4x2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double4x2_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double4x3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double4x3_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double4x4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double4x4_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float2x3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float2x3_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float2x4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float2x4_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float3x2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float3x2_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float3x3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float3x3_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float3x4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float3x4_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float4x2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float4x2_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float4x3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float4x3_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float4x4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float4x4_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/common.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/func_vector_relational.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/qualifier.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/setup.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/vector_relational.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/compute_vector_relational.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/_fixes.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/_vectorize.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/compute_common.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/func_common.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/func_exponential.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/qualifier.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/setup.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec1.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec1.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/exponential.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/func_geometric.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/geometric.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/func_matrix.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/qualifier.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/setup.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat2x2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat2x3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat2x4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat3x2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat3x3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat3x4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat4x2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat4x3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat4x4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/matrix.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/vec2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/vec3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/vec4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/compute_vector_relational.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/setup.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/compute_vector_relational.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/qualifier.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/setup.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat2x2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat2x2.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec2.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec3.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec4.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/setup.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/scalar_int_sized.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/scalar_uint_sized.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_int2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_int3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_int4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_uint2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_uint3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_uint4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double2x2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double2x2_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float2x2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float2x2_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_bool2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_bool2_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_bool3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_bool3_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_bool4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_bool4_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_double2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_double2_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_double3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_double3_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_double4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_double4_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_float2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_float2_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_float3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_float3_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_float4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_float4_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_int2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_int2_sized.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_int3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_int3_sized.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_int4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_int4_sized.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_uint2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_uint2_sized.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_uint3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_uint3_sized.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_uint4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_uint4_sized.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/common.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/common.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/simd/platform.h \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/_fixes.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/_vectorize.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/func_integer.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/func_packing.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/func_trigonometric.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/qualifier.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/setup.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_half.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_half.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/exponential.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/fwd.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/geometric.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/glm.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/scalar_constants.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/geometric.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/setup.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/scalar_constants.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/scalar_constants.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/gtc/constants.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/gtc/constants.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/matrix.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/trigonometric.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_clip_space.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_clip_space.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_projection.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_projection.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_transform.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_transform.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/geometric.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/common.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/qualifier.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/setup.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat3x3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat4x4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/exponential.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/common.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat3x3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat4x4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/exponential.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/vector_relational.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_geometric.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_relational.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_relational.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_relational.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/gtc/constants.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/gtc/matrix_transform.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/trigonometric.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/qualifier.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/setup.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_float.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_quat.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_quat.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec1.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/exponential.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/exponential.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_relational.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/geometric.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_geometric.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_geometric.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/scalar_constants.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/scalar_int_sized.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/scalar_uint_sized.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_int1.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_uint1.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/geometric.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/trigonometric.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/vector_relational.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_common.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_common.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_double.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_double_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_float.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_float_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_geometric.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_relational.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_transform.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_transform.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_trigonometric.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_trigonometric.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/scalar_constants.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_bool1.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_bool1_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_double1.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_double1_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_float1.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_float1_precision.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_int1.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_int1_sized.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_relational.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_relational.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_uint1.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/ext/vector_uint1_sized.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/geometric.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/gtc/constants.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/gtc/matrix_transform.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/trigonometric.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/vector_relational.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/gtc/epsilon.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/gtc/epsilon.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/gtc/quaternion.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/gtc/quaternion.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/gtc/vec1.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat2x2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat2x3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat2x4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat3x2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat3x3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat3x4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat4x2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat4x3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat4x4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/matrix.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/trigonometric.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/vec2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/vec3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/vec4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/gtc/matrix_transform.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/gtc/matrix_transform.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/gtc/type_ptr.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/gtc/type_ptr.inl \
-  /Users/bigrorz/LearnOpenGL/include/glm/integer.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat2x2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat2x3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat2x4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat3x2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat3x3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat3x4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat4x2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat4x3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/mat4x4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/matrix.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/packing.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/trigonometric.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/vec2.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/vec3.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/vec4.hpp \
-  /Users/bigrorz/LearnOpenGL/include/glm/vector_relational.hpp \
-  /Users/bigrorz/LearnOpenGL/include/stb_image.h \
+  /Users/bigrorz/LearnOpenGL/lib/glad/include/KHR/khrplatform.h \
+  /Users/bigrorz/LearnOpenGL/lib/glad/include/glad/glad.h \
   /Users/bigrorz/LearnOpenGL/lib/glfw/include/GLFW/glfw3.h \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/matrix.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat2x2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat2x3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat2x3.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat2x4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat2x4.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat3x2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat3x2.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat3x3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat3x3.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat3x4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat3x4.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat4x2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat4x2.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat4x3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat4x3.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat4x4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat4x4.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double2x3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double2x3_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double2x4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double2x4_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double3x2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double3x2_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double3x3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double3x3_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double3x4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double3x4_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double4x2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double4x2_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double4x3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double4x3_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double4x4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double4x4_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float2x3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float2x3_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float2x4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float2x4_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float3x2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float3x2_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float3x3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float3x3_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float3x4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float3x4_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float4x2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float4x2_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float4x3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float4x3_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float4x4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float4x4_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/common.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/func_vector_relational.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/qualifier.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/setup.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/vector_relational.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/compute_vector_relational.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/_fixes.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/_vectorize.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/compute_common.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/func_common.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/func_exponential.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/qualifier.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/setup.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec1.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec1.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/exponential.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/func_geometric.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/geometric.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/func_matrix.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/qualifier.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/setup.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat2x2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat2x3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat2x4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat3x2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat3x3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat3x4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat4x2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat4x3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat4x4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/matrix.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/vec2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/vec3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/vec4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/compute_vector_relational.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/setup.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/compute_vector_relational.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/qualifier.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/setup.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat2x2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat2x2.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec2.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec3.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec4.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/setup.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/scalar_int_sized.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/scalar_uint_sized.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_int2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_int3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_int4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_uint2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_uint3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_uint4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double2x2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double2x2_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float2x2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float2x2_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_bool2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_bool2_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_bool3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_bool3_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_bool4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_bool4_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_double2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_double2_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_double3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_double3_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_double4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_double4_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_float2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_float2_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_float3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_float3_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_float4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_float4_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_int2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_int2_sized.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_int3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_int3_sized.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_int4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_int4_sized.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_uint2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_uint2_sized.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_uint3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_uint3_sized.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_uint4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_uint4_sized.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/common.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/common.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/simd/platform.h \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/_fixes.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/_vectorize.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/func_integer.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/func_packing.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/func_trigonometric.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/qualifier.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/setup.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_half.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_half.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/exponential.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/fwd.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/geometric.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/glm.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/scalar_constants.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/geometric.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/setup.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/scalar_constants.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/scalar_constants.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/constants.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/constants.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/matrix.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/trigonometric.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_clip_space.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_clip_space.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_projection.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_projection.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_transform.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_transform.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/geometric.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/common.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/qualifier.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/setup.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat3x3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat4x4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/exponential.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/common.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat3x3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat4x4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/exponential.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/vector_relational.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_geometric.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_relational.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_relational.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_relational.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/constants.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/matrix_transform.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/trigonometric.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/qualifier.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/setup.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_float.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_quat.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_quat.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec1.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/exponential.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/exponential.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_relational.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/geometric.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_geometric.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_geometric.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/scalar_constants.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/scalar_int_sized.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/scalar_uint_sized.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_int1.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_uint1.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/geometric.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/trigonometric.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/vector_relational.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_common.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_common.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_double.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_double_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_float.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_float_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_geometric.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_relational.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_transform.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_transform.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_trigonometric.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_trigonometric.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/scalar_constants.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_bool1.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_bool1_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_double1.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_double1_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_float1.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_float1_precision.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_int1.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_int1_sized.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_relational.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_relational.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_uint1.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_uint1_sized.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/geometric.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/constants.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/matrix_transform.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/trigonometric.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/vector_relational.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/epsilon.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/epsilon.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/quaternion.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/quaternion.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/vec1.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat2x2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat2x3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat2x4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat3x2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat3x3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat3x4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat4x2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat4x3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat4x4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/matrix.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/trigonometric.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/vec2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/vec3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/vec4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/matrix_transform.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/matrix_transform.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/type_ptr.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/type_ptr.inl \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/integer.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat2x2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat2x3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat2x4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat3x2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat3x3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat3x4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat4x2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat4x3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat4x4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/matrix.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/packing.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/trigonometric.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/vec2.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/vec3.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/vec4.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/vector_relational.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/stb_image.h \
+  /Users/bigrorz/LearnOpenGL/src/headers/camera.h \
   /Users/bigrorz/LearnOpenGL/src/headers/shader.h
 
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/matrix_transform.inl:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/quaternion.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/epsilon.inl:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_float1_precision.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_double1.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_transform.inl:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_transform.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_float_precision.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_double.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_common.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_int1.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_quat.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_float.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_clip_space.inl:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/trigonometric.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/constants.inl:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/scalar_constants.inl:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_half.inl:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_half.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/func_integer.inl:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_uint2_sized.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_int3_sized.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_float4.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_float2.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_double4.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_float2_precision.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_double3_precision.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_double3.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_bool4.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_bool3_precision.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_bool2_precision.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double2x2_precision.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_uint4.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_uint3.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_int4.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_int3.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_int2.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/scalar_uint_sized.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/scalar_int_sized.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec4.inl:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec2.inl:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/vec4.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/vec3.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/vec2.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat4x4.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat4x3.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat4x2.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat3x3.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat3x2.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat2x4.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat2x2.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/exponential.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec1.inl:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/func_exponential.inl:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/compute_common.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/_vectorize.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/common.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float4x4_precision.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float4x4.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float4x3.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float4x2_precision.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float4x2.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float3x3_precision.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float3x3.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_common.inl:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float3x2_precision.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float2x4_precision.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float2x4.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double4x4_precision.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double4x4.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double4x3_precision.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double4x3.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double4x2_precision.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double3x4_precision.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double3x3.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double3x2_precision.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double2x4.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec2.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat4x3.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat4x2.inl:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat4x2.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat3x4.inl:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat3x3.inl:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_bool1.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat3x2.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/qualifier.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat2x4.inl:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat2x4.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat2x3.inl:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_projection.inl:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat2x3.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat2x2.hpp:
+
 /Users/bigrorz/LearnOpenGL/lib/glfw/include/GLFW/glfw3.h:
 
-/Users/bigrorz/LearnOpenGL/include/stb_image.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/packing.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/integer.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/gtc/epsilon.inl:
-
-/Users/bigrorz/LearnOpenGL/include/glm/gtc/epsilon.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_int1_sized.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_float1_precision.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_float1.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_double1_precision.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_bool1_precision.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_trigonometric.inl:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_trigonometric.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_float_precision.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_double_precision.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_common.inl:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_int1.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_geometric.inl:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_quat.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/gtc/matrix_transform.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_geometric.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_projection.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_clip_space.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/trigonometric.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/gtc/constants.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/scalar_constants.inl:
-
-/Users/bigrorz/LearnOpenGL/include/glm/glm.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/func_packing.inl:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_uint2_sized.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_int4_sized.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_float4_precision.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_float4.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_double4_precision.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_double.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_double4.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_double3_precision.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_double2_precision.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_double2.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_bool4_precision.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_bool3_precision.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_bool3.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_bool2_precision.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_bool2.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float2x2_precision.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float2x2.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double2x2_precision.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double2x2.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_uint4.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_float3.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_uint3.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_int4.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_int2.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec4.inl:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec2.inl:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat2x2.inl:
-
-/Users/bigrorz/LearnOpenGL/include/glm/vec3.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/mat4x2.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/mat3x3.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/mat2x3.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/mat2x2.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/geometric.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/func_geometric.inl:
-
-/Users/bigrorz/LearnOpenGL/include/glm/gtc/quaternion.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec1.inl:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/compute_common.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/_fixes.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/compute_vector_relational.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/setup.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/func_vector_relational.inl:
-
-/Users/bigrorz/LearnOpenGL/include/glm/common.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_int2_sized.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float4x4_precision.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float4x4.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float4x2.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float3x2.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float2x3_precision.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float2x3.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double4x4.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double4x3.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double4x2_precision.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_double3.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double3x4_precision.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double3x4.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double3x3_precision.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double3x3.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double3x2_precision.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double3x2.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double2x4.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_float2_precision.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double2x3_precision.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec3.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat4x4.inl:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat4x3.inl:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat4x2.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float3x4.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat3x4.inl:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat3x4.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_int3_sized.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat3x2.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat2x4.inl:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat2x4.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat2x3.inl:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/qualifier.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat2x3.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/matrix.hpp:
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_float1.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_ptrdiff_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_offsetof.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_relational.inl:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_nullptr_t.h:
 
@@ -1609,8 +1590,6 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stdarg_va_arg.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stdarg_header_macro.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double4x2.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stdarg___va_copy.h:
 
@@ -1625,6 +1604,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/xlocale/_stdlib.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/xlocale/_stdio.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/func_packing.inl:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/xlocale.h:
 
@@ -1642,11 +1623,7 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/select.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_clip_space.inl:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/qos.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/func_matrix.inl:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/errno.h:
 
@@ -1674,8 +1651,6 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_fd_clr.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/scalar_int_sized.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_caddr_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_blksize_t.h:
@@ -1696,13 +1671,11 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/pthread/qos.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_quat.inl:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float3x2_precision.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/pthread.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/nl_types.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/func_common.inl:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/math.h:
 
@@ -1720,11 +1693,11 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/variant:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_bool4_precision.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/typeinfo:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/tuple:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/func_common.inl:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/string:
 
@@ -1736,8 +1709,6 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/stddef.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float4x2_precision.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/stack:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/sstream:
@@ -1747,6 +1718,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/optional:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/new:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_relational.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/mutex:
 
@@ -1762,6 +1735,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/iomanip:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float3x4_precision.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/initializer_list:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/fstream:
@@ -1769,6 +1744,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/execution:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/errno.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat4x3.inl:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/deque:
 
@@ -1786,21 +1763,19 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/cstring:
 
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec4.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/cstdlib:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat3x4.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/cstdio:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double4x3_precision.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/concepts:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float3x3_precision.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/compare:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/cmath:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat4x4.inl:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/clocale:
 
@@ -1840,7 +1815,7 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__utility/declval.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_bool4.hpp:
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double4x2.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__utility/convert_to_integral.h:
 
@@ -1888,6 +1863,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/nat.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat2x3.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_types/_uint16_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__locale:
@@ -1914,6 +1891,10 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_standard_layout.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/fwd.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double2x4_precision.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__format/format_string.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_specialization.h:
@@ -1930,6 +1911,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_same.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/func_vector_relational.inl:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_wint_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_reference_wrapper.h:
@@ -1937,6 +1920,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_primary_template.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_polymorphic.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_bool3.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_null_pointer.h:
 
@@ -1948,15 +1933,13 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_integral.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_transform.inl:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/apply_cv.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_move_constructible.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_function.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_half.inl:
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_bool1_precision.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_abort.h:
 
@@ -1988,13 +1971,11 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_allocator.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_uint1.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_aggregate.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/integral_constant.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_float.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat3x3.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/is_heap.h:
 
@@ -2005,8 +1986,6 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_final.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/dependent_type.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/func_exponential.inl:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/u8path.h:
 
@@ -2028,17 +2007,17 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/aligned_union.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_uint1_sized.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/add_volatile.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec2.hpp:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_enum.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__tuple/tuple_element.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/add_lvalue_reference.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__tuple/tuple_types.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_float3.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory_resource/polymorphic_allocator.h:
 
@@ -2050,9 +2029,11 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__tuple/pair_like.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/integer.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__tuple/make_tuple_types.h:
 
-/Users/bigrorz/LearnOpenGL/include/glad/glad.h:
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/constants.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__threading_support:
 
@@ -2100,6 +2081,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__ranges/enable_view.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat2x2.inl:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_convertible.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__ranges/enable_borrowed_range.h:
@@ -2124,15 +2107,11 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_signed.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_float.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_pop_heap.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__functional/function.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__mutex/unique_lock.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/mat4x3.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__utility/exception_guard.h:
 
@@ -2146,11 +2125,13 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_copyable.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec1.hpp:
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_relational.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/uses_allocator_construction.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/temporary_buffer.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat3x3.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/partial_sort.h:
 
@@ -2164,9 +2145,9 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_constructible.h:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/destruct_n.h:
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec4.hpp:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_uint4_sized.hpp:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/destruct_n.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/assert.h:
 
@@ -2210,11 +2191,11 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/fdim.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_bool1.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/pstl_transform.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__mutex/once_flag.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double2x3_precision.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/exponential_functions.h:
 
@@ -2223,6 +2204,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_fundamental.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/make_signed.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_trigonometric.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/copysign.h:
 
@@ -2236,15 +2219,13 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/unreachable_sentinel.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat3x3.inl:
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_uint3_sized.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_partition.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/size.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/segmented_iterator.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_relational.inl:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/ios:
 
@@ -2264,23 +2245,29 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_default_constructible.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/type_ptr.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec3.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_count.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/operation_traits.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/permutable.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/simd/platform.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/ostream:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/ostreambuf_iterator.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec1.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/next.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/string_view:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/move_iterator.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/mat2x4.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/iterator.h:
 
@@ -2289,8 +2276,6 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/inplace_merge.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/iter_swap.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat4x3.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_for_each_n.h:
 
@@ -2302,6 +2287,10 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/counted_iterator.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_float.hpp:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double3x4.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_iterator_concept.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/concepts.h:
@@ -2312,7 +2301,7 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/tuple.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_relational.hpp:
+/Users/bigrorz/LearnOpenGL/lib/stb_image.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/subrange.h:
 
@@ -2320,27 +2309,27 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/string_view.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_common.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/allocation_guard.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__string/extern_template_lists.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/string.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/func_geometric.inl:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/pair.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_uint1_sized.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/istream.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float3x3.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/get.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/geometric.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/ranges_construct_at.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__tuple/tuple_like.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_relational.inl:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_partition_point.h:
 
@@ -2349,6 +2338,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/bit_reference.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/array.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_transform.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__functional/unary_negate.h:
 
@@ -2378,6 +2369,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__functional/invoke.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/compute_vector_relational.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__functional/identity.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/remove_copy.h:
@@ -2398,8 +2391,6 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__functional/default_searcher.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float4x3.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/fill_n.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__functional/binder1st.h:
@@ -2407,6 +2398,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_constructible.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/enable_if.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat3x2.inl:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/move_sentinel.h:
 
@@ -2416,6 +2409,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__format/parser_std_format_spec.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float2x3_precision.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__format/formatter_tuple.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__format/formatter_string.h:
@@ -2424,13 +2419,9 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__format/formatter_floating_point.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_transform.inl:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/data.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__format/formatter.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_transform.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__format/format_to_n_result.h:
 
@@ -2439,6 +2430,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/copy_cvref.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__format/format_functions.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_bool2.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/hash.h:
 
@@ -2462,15 +2455,11 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/indirectly_comparable.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/gtc/vec1.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__format/enable_insertable.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__concepts/copyable.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__format/container_adaptor.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_vec3.inl:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__format/buffer.h:
 
@@ -2480,15 +2469,13 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/uniform_int_distribution.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/func_trigonometric.inl:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/perms.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/stdint.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/path_iterator.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__utility/forward_like.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/path.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/operations.h:
 
@@ -2496,11 +2483,11 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/erase_if_container.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_double1_precision.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/file_type.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/remove_all_extents.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat3x2.inl:
 
 /Users/bigrorz/LearnOpenGL/lib/glad/src/glad.c:
 
@@ -2526,6 +2513,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__exception/terminate.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glad/include/KHR/khrplatform.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__exception/operations.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__exception/exception.h:
@@ -2550,13 +2539,15 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__std_mbstate_t.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_projection.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__functional/bind_back.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/type_ptr.inl:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__concepts/same_as.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__concepts/movable.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_half.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/half_positive.h:
 
@@ -2574,17 +2565,17 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__concepts/common_with.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/gtc/constants.inl:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__concepts/common_reference_with.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/shared_ptr.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat2x2.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/remove_extent.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__concepts/boolean_testable.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/matrix.hpp:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__concepts/assignable.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/find.h:
 
@@ -2610,8 +2601,6 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_base_of.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_float3_precision.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_contains.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__chrono/high_resolution_clock.h:
@@ -2635,6 +2624,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__ios/fpos.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__charconv/tables.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/_fixes.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/ios.h:
 
@@ -2724,6 +2715,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/unwrap_iter.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float3x4.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/iterator:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/transform.h:
@@ -2731,6 +2724,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__format/formatter_integral.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/in_out_result.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_int1_sized.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/stable_sort.h:
 
@@ -2743,8 +2738,6 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/pstl_sort.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/set_difference.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/vec4.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__atomic/aliases.h:
 
@@ -2764,8 +2757,6 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/negation.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/gtc/type_ptr.inl:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_abstract.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/has_unique_object_representation.h:
@@ -2783,6 +2774,10 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_move_assignable.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/conjunction.h:
+
+/Users/bigrorz/LearnOpenGL/src/headers/camera.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/packing.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/cpp17_iterator_concepts.h:
 
@@ -2818,6 +2813,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_find_if.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_vec3.inl:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_transform.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_stable_sort.h:
@@ -2842,11 +2839,11 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_set_symmetric_difference.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double2x2.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_set_intersection.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/voidify.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/func_integer.inl:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_fill_n.h:
 
@@ -2856,6 +2853,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_set_difference.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/epsilon.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/float.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/fma.h:
@@ -2863,6 +2862,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__bit/popcount.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_search_n.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double3x2.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_search.h:
 
@@ -2875,8 +2876,6 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/mismatch.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/pstl_frontend_dispatch.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_uint2.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_sample.h:
 
@@ -2900,6 +2899,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_rotate.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_float4_precision.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/copy_backward.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_max.h:
@@ -2922,9 +2923,13 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/lower_bound.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_geometric.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__compare/compare_three_way.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/aligned_storage.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/vector_relational.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_prev_permutation.h:
 
@@ -2932,15 +2937,11 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_types/_intmax_t.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_double1.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/pstl_backends/cpu_backends/merge.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/sort_heap.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/pstl_backends/cpu_backends/stable_sort.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double2x3.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/includes.h:
 
@@ -2953,8 +2954,6 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_upper_bound.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_next_permutation.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/_vectorize.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_clock_t.h:
 
@@ -2974,6 +2973,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_min_element.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float2x2_precision.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__mbstate_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/clamp.h:
@@ -2984,11 +2985,9 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_merge.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float3x4_precision.hpp:
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_mat4x4.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_max_element.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat4x4.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/ostream.h:
 
@@ -2998,13 +2997,15 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_make_heap.h:
 
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_lexicographical_compare.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__bit/bit_width.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__format/format_context.h:
 
-/Users/bigrorz/LearnOpenGL/include/KHR/khrplatform.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_is_permutation.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_float3_precision.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_wchar.h:
 
@@ -3036,10 +3037,6 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_find_end.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/scalar_constants.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/scalar_uint_sized.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_find.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_fill.h:
@@ -3060,9 +3057,13 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_copy_backward.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_uint4_sized.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/pstl_backends/cpu_backend.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_binary_search.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float3x2.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__compare/strong_order.h:
 
@@ -3070,13 +3071,15 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_any_of.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/mat4x4.hpp:
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_double2.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/logarithms.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/in_in_out_result.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__compare/three_way_comparable.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/scalar_constants.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_equality_comparable.h:
 
@@ -3086,11 +3089,15 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_mismatch.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_int4_sized.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/hypot.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_ctermid.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/make_heap.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/glm.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/pstl_rotate_copy.h:
 
@@ -3132,17 +3139,15 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__functional/bind.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float4x3_precision.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/pstl_backends/cpu_backends/any_of.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_replace.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/detail/func_trigonometric.inl:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_off_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/pstl_copy.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/vec1.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/pstl_backends/cpu_backends/transform_reduce.h:
 
@@ -3177,6 +3182,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/partial_sort_copy.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/min.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double2x3.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/xlocale/___wctype.h:
 
@@ -3214,13 +3221,13 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_stable_partition.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/gtc/matrix_transform.inl:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_intptr_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_copy.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/make_projected.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/generate_n.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/pstl_backends/cpu_backends/find_if.h:
 
@@ -3244,6 +3251,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/copy_n.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float2x2.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/inverse_hyperbolic_functions.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/is_heap_until.h:
@@ -3256,9 +3265,15 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/comp.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float2x4.hpp:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__utility/forward_like.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/path.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glad/include/glad/glad.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/prev_permutation.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_trigonometric.inl:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/promote.h:
 
@@ -3266,9 +3281,9 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_printf.h:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/common_iterator.h:
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_double4_precision.hpp:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double4x4_precision.hpp:
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/common_iterator.h:
 
 /Users/bigrorz/LearnOpenGL/src/main.cpp:
 
@@ -3281,10 +3296,6 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/in_found_result.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__concepts/swappable.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/generate_n.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_float2x4_precision.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_destructible.h:
 
@@ -3322,15 +3333,17 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_types/_wctype_t.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_transform.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/remainder.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_int2_sized.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_uuid_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_pthread/_pthread_cond_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_remove_if.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_double_precision.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/AvailabilityVersions.h:
 
@@ -3368,8 +3381,6 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/lazy.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_float2.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/prev.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/copy_if.h:
@@ -3398,6 +3409,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/count_if.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/func_matrix.inl:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_u_char.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/adjacent_find.h:
@@ -3408,19 +3421,13 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__bit/countl.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/quaternion_relational.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/find_if_not.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/arm/signal.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__system_error/error_code.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/mat3x4.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_unique.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/mat3x2.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/resource.h:
 
@@ -3444,10 +3451,6 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/distance.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_int3.hpp:
-
-/Users/bigrorz/LearnOpenGL/include/glm/vec2.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/__xlocale.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/limits.h:
@@ -3457,8 +3460,6 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/exception:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/for_each_segment.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/exponential.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__concepts/regular.h:
 
@@ -3508,8 +3509,6 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/secure/_common.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/simd/platform.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_is_partitioned.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/for_each_n.h:
@@ -3519,6 +3518,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stddef.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/decay.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/setup.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_errno_t.h:
 
@@ -3538,8 +3539,6 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/in_fun_result.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_uint3_sized.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/___wctype.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/shift_right.h:
@@ -3554,17 +3553,9 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_sigset_t.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/gtc/type_ptr.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_stdlib.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/minmax_element.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_lexicographical_compare.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/vector_relational.hpp:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__concepts/assignable.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/fill.h:
 
@@ -3578,13 +3569,15 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_ct_rune_t.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/vector_uint1.hpp:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__config:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__compare/compare_three_way_result.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_geometric.inl:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_unique_copy.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_double2_precision.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/unwrap_range.h:
 
@@ -3604,6 +3597,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/make_unsigned.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_transform.inl:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/ratio:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/strip_signature.h:
@@ -3613,8 +3608,6 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__functional/binder2nd.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/uniform_random_bit_generator_adaptor.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_double2x4_precision.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/arm/endian.h:
 
@@ -3626,17 +3619,21 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/iterator_traits.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_clip_space.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/maybe_const.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/search_n.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/detail/type_mat4x2.inl:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/stdlib.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/appleapiopts.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_types/_uintmax_t.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_partial_sort_copy.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_is_heap.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/AvailabilityInternal.h:
 
@@ -3654,13 +3651,13 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/Availability.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/gtc/quaternion.inl:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/alloca.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_string.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/machine/_mcontext.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/detail/type_quat.inl:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/cdefs.h:
 
@@ -3669,8 +3666,6 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__debug_utils/strict_weak_ordering_check.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/arm/_types.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_enum.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__compare/ordering.h:
 
@@ -3690,7 +3685,11 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__ranges/container_compatible_range.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/matrix_transform.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_strings.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/quaternion_relational.inl:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/dlfcn.h:
 
@@ -3698,11 +3697,13 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/arm/_mcontext.h:
 
-/Users/bigrorz/LearnOpenGL/include/glm/ext/matrix_projection.inl:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_convertible.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_uint2.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/signal.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double3x3_precision.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__math/trigonometric_functions.h:
 
@@ -3712,15 +3713,13 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/move.h:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_partial_sort_copy.h:
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/quaternion.inl:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_is_heap.h:
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float4x3_precision.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_constant_evaluated.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__random/log2.h:
-
-/Users/bigrorz/LearnOpenGL/include/glm/fwd.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/unique_copy.h:
 
@@ -3732,6 +3731,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_volatile.h:
 
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_float2x3.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_adjacent_find.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/arm/types.h:
@@ -3741,6 +3742,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/is_sorted_until.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__fwd/sstream.h:
+
+/Users/bigrorz/LearnOpenGL/lib/glm/include/glm/mat3x4.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/mach/machine/_structs.h:
 
