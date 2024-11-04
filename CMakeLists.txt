@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 
+set(CMAKE_BUILD_TYPE Release)
+
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -29,6 +31,7 @@ include_directories("lib/glad/include")
 include_directories("lib/glfw/include")
 include_directories("lib/glm/include")
 include_directories("lib/assimp/include")
+include_directories("src/headers")
 
 
 # Set source files
