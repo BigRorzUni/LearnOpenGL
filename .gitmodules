@@ -1,6 +1,6 @@
 [submodule "glfw"]
-	path = glfw
+	path = lib/glfw
 	url = https://github.com/glfw/glfw
-[submodule "lib/assimp"]
+[submodule "assimp"]
 	path = lib/assimp
 	url = https://github.com/assimp/assimp.git
