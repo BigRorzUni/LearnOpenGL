@@ -5,17 +5,17 @@
 # compile CXX with /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
 C_DEFINES = 
 
-C_INCLUDES = -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib -I/Users/bigrorz/LearnOpenGL/lib/glad/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glm/include
+C_INCLUDES = -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib -I/Users/bigrorz/LearnOpenGL/lib/glad/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glm/include -I/Users/bigrorz/LearnOpenGL/lib/assimp/include -I/Users/bigrorz/LearnOpenGL/lib/assimp/code/../include -I/Users/bigrorz/LearnOpenGL/build/lib/assimp/code/../include
 
-C_FLAGSarm64 = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
+C_FLAGSarm64 =  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
 
-C_FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
+C_FLAGS =  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib -I/Users/bigrorz/LearnOpenGL/lib/glad/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glm/include
+CXX_INCLUDES = -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks -I/Users/bigrorz/LearnOpenGL/lib -I/Users/bigrorz/LearnOpenGL/lib/glad/include -I/Users/bigrorz/LearnOpenGL/lib/glfw/include -I/Users/bigrorz/LearnOpenGL/lib/glm/include -I/Users/bigrorz/LearnOpenGL/lib/assimp/include -I/Users/bigrorz/LearnOpenGL/lib/assimp/code/../include -I/Users/bigrorz/LearnOpenGL/build/lib/assimp/code/../include
 
-CXX_FLAGSarm64 = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
+CXX_FLAGSarm64 = -std=gnu++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
 
-CXX_FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
+CXX_FLAGS = -std=gnu++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk
 

@@ -1088,6 +1088,23 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stdint.h \
+  lib/assimp/include/assimp/config.h \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/Importer.hpp \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/MathFunctions.h \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/color4.h \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/color4.inl \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/defs.h \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/matrix3x3.h \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/matrix3x3.inl \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/matrix4x4.h \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/matrix4x4.inl \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/quaternion.h \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/quaternion.inl \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/types.h \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/vector2.h \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/vector2.inl \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/vector3.h \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/vector3.inl \
   /Users/bigrorz/LearnOpenGL/lib/glad/include/KHR/khrplatform.h \
   /Users/bigrorz/LearnOpenGL/lib/glad/include/glad/glad.h \
   /Users/bigrorz/LearnOpenGL/lib/glfw/include/GLFW/glfw3.h \
@@ -1573,6 +1590,26 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Users/bigrorz/LearnOpenGL/lib/glfw/include/GLFW/glfw3.h:
 
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/vector3.inl:
+
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/vector2.h:
+
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/types.h:
+
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/quaternion.inl:
+
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/matrix4x4.h:
+
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/matrix3x3.h:
+
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/defs.h:
+
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/color4.h:
+
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/MathFunctions.h:
+
+lib/assimp/include/assimp/config.h:
+
 /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_float1.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_ptrdiff_t.h:
@@ -1596,6 +1633,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stdarg___gnuc_va_list.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/xlocale/_wctype.h:
+
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/vector3.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/xlocale/_wchar.h:
 
@@ -1839,6 +1878,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/unwrap_ref.h:
 
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/color4.inl:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/underlying_type.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/type_list.h:
@@ -1876,6 +1917,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_unbounded_array.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_move_assignable.h:
+
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/matrix4x4.inl:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__utility/in_place.h:
 
@@ -2291,6 +2334,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/matrix_double3x4.hpp:
 
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/matrix3x3.inl:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_iterator_concept.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/concepts.h:
@@ -2703,6 +2748,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__atomic/atomic.h:
 
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/Importer.hpp:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__functional/perfect_forward.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__assertion_handler:
@@ -2966,6 +3013,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__atomic/atomic_sync.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_minmax.h:
+
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/quaternion.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_compound.h:
 
@@ -3368,6 +3417,8 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/search.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_stdio.h:
+
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/vector2.inl:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_default_constructible.h:
 

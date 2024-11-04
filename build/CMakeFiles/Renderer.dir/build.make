@@ -109,6 +109,8 @@ Renderer: CMakeFiles/Renderer.dir/src/main.cpp.o
 Renderer: CMakeFiles/Renderer.dir/lib/glad/src/glad.c.o
 Renderer: CMakeFiles/Renderer.dir/build.make
 Renderer: lib/glfw/src/libglfw3.a
+Renderer: lib/assimp/lib/libassimp.a
+Renderer: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/lib/libz.tbd
 Renderer: CMakeFiles/Renderer.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/bigrorz/LearnOpenGL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Renderer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Renderer.dir/link.txt --verbose=$(VERBOSE)
