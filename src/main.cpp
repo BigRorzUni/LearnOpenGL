@@ -1,6 +1,5 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include <iostream>
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -10,11 +9,11 @@
 #include <camera.h>
 #include <model.h>
 
+#include <iostream>
 
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb_image.h>
 
-// -------------- FUNCTION PROTOTYPES ----------------
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
@@ -23,30 +22,24 @@ void escInput(GLFWwindow* window);
 void tabInput(GLFWwindow* window);
 void cameraInput(GLFWwindow* window);
 
-// -------------- WINDOW SETTINGS ----------------
+// settings
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
-// ----------------- CAMERA INIT -----------------
+// camera
 Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
-float lastX = SCR_WIDTH/2, lastY = SCR_HEIGHT/2;
-bool firstMouse = true; // initially true to prevent camera jump on first mouse movement
+float lastX = SCR_WIDTH / 2.0f, lastY = SCR_HEIGHT / 2.0f;
+bool firstMouse = true;
 
-// ----------------- TIME INIT -----------------
-float deltaTime = 0.0f; // Time between current frame and last frame
-float lastFrame = 0.0f; // Time of last frame
-
-// ----------------- LIGHTING INIT -----------------
-glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
+// timing
+float deltaTime = 0.0f;
+float lastFrame = 0.0f;
 
 int main()
 {
     chdir("..");
-
-    // ----------------- INIT -----------------
     #pragma region GLFW & GLAD Initialisation
-
-    // ----------------- GLFW -----------------
+    // ----------------- GLFW INIT -----------------
     // initialise and configure glfw
     if (!glfwInit())
     {
@@ -58,7 +51,9 @@ int main()
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // for MacOS
+#ifdef __APPLE__
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+#endif
     
     // create a window
     GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "Learn OpenGL", NULL, NULL);
@@ -89,87 +84,72 @@ int main()
         return -1;
     }
 
+
     // tell stb_image.h to flip loaded texture's on the y-axis (before loading model).
     stbi_set_flip_vertically_on_load(true);
 
-    #pragma endregion
-
-    // -------------- ENABLE DEPTH TESTING --------------
+    // configure global opengl state
+    // -----------------------------
     glEnable(GL_DEPTH_TEST);
     
-    // ----------------- SHADER PROGRAM -----------------
-    
-    Shader shader("modelShader.vs", "modelShader.fs");
+    #pragma endregion
 
-    // ----------------- LOAD MODEL -----------------
+    // build and compile shaders
+    // -------------------------
+    Shader ourShader("modelShader.vs", "modelShader.fs");
 
-    Model m("assets/backpack/backpack.obj");
+    // load models
+    // -----------
+    Model ourModel("assets/backpack/backpack.obj");
 
-   // draw in wireframe
-    //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-
-    shader.use();
-    
-    
-        // view/projection transformations
-        glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
-        glm::mat4 view = camera.GetViewMatrix();
-        shader.setMat4("projection", projection);
-        shader.setMat4("view", view);
-
-        // render the loaded model
-        glm::mat4 model = glm::mat4(1.0f);
-        model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f)); // translate it down so it's at the center of the scene
-        model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));	// it's a bit too big for our scene, so scale it down
-        shader.setMat4("model", model);
-
-
-    m.Draw(shader);
-    
-
-    // ----------------- RENDER LOOP -----------------
-    while(!glfwWindowShouldClose(window))
+    // render loop
+    // -----------
+    while (!glfwWindowShouldClose(window))
     {
-        // ----------------- DELTA TIME -----------------
-        float currentFrame = glfwGetTime();
+        // per-frame time logic
+        // --------------------
+        float currentFrame = static_cast<float>(glfwGetTime());
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
 
-        float timeValue = glfwGetTime();
-
-        // ----------------- INPUT -----------------
+        // input
+        // -----
         escInput(window);
         tabInput(window);
         cameraInput(window);
 
-        // ----------------- RENDERING -----------------
-        glClearColor(0.1f, 0.1f, 0.1f, 0.1f);
+        // render
+        // ------
+        glClearColor(0.05f, 0.05f, 0.05f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        // ----------------- MODEL -----------------
-        shader.use();
+        // ----------------- RENDER MODEL -----------------
+        // enable shader
+        ourShader.use();
 
-        // view/projection transformations
+        // projection transformations
         glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
-        glm::mat4 view = camera.GetViewMatrix();
-        shader.setMat4("projection", projection);
-        shader.setMat4("view", view);
+        ourShader.setMat4("projection", projection);
 
-        // render the loaded model
-        glm::mat4 model = glm::mat4(1.0f);
+        // view transformations
+        glm::mat4 view = camera.GetViewMatrix();
+        ourShader.setMat4("view", view);
+
+        // model transformations
+        glm::mat4 model(1.0f);
         model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f)); // translate it down so it's at the center of the scene
         model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));	// it's a bit too big for our scene, so scale it down
-        shader.setMat4("model", model);
+        ourShader.setMat4("model", model);
 
-        //m.Draw(shader);
+        // render the model
+        ourModel.Draw(ourShader);
 
-        // ----------------- SWAP BUFFERS AND POLL EVENTS -----------------
+        // ----------------- SWAP BUFFERS AND POLL EVENTS --------------
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
-    
+
     glfwTerminate();
-        
     return 0;
 }
 
@@ -214,35 +194,40 @@ void cameraInput(GLFWwindow* window)
         camera.ProcessKeyboard(RIGHT, deltaTime);
 }
 
-// ----------------- CALLBACKS -----------------
+// glfw: whenever the window size changed (by OS or user resize) this callback function executes
+// ---------------------------------------------------------------------------------------------
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
+    // make sure the viewport matches the new window dimensions; note that width and 
+    // height will be significantly larger than specified on retina displays.
     glViewport(0, 0, width, height);
 }
 
+// glfw: whenever the mouse moves, this callback is called
+// -------------------------------------------------------
 void mouse_callback(GLFWwindow* window, double xposIn, double yposIn)
 {
     float xpos = static_cast<float>(xposIn);
     float ypos = static_cast<float>(yposIn);
 
-    if(firstMouse)
+    if (firstMouse)
     {
         lastX = xpos;
         lastY = ypos;
         firstMouse = false;
     }
 
-    float xOffset, yOffset;
+    float xoffset = xpos - lastX;
+    float yoffset = lastY - ypos; // reversed since y-coordinates go from bottom to top
 
-    xOffset = xpos - lastX;
-    yOffset = lastY - ypos; // reversed since y-coordinates range from bottom to top
-    
     lastX = xpos;
     lastY = ypos;
 
-    camera.ProcessMouseMovement(xOffset, yOffset);
+    camera.ProcessMouseMovement(xoffset, yoffset);
 }
 
+// glfw: whenever the mouse scroll wheel scrolls, this callback is called
+// ----------------------------------------------------------------------
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 {
     camera.ProcessMouseScroll(static_cast<float>(yoffset));
