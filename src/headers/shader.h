@@ -20,13 +20,6 @@ class Shader
             // move working directory so it can access shaders easily
             chdir("src/shaders");
 
-            char cwd[1024];
-            if (getcwd(cwd, sizeof(cwd)) != NULL) {
-                std::cout << "Current working directory: " << cwd << std::endl;
-            } else {
-                perror("_getcwd() error");
-            }
-
             // 1. retrieve the vertex/fragment source code from filePath
             std::string vertexCode;
             std::string fragmentCode;

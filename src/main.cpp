@@ -35,6 +35,9 @@ bool firstMouse = true;
 float deltaTime = 0.0f;
 float lastFrame = 0.0f;
 
+// lighting
+glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
+
 int main()
 {
     chdir("..");
@@ -126,6 +129,20 @@ int main()
         // ----------------- RENDER MODEL -----------------
         // enable shader
         ourShader.use();
+
+        // view position
+        ourShader.setVec3("viewPos", camera.Position);
+
+        // light properties
+        ourShader.setVec3("dirLight.direction", 0.4f, -1.0f, -0.3f);
+
+        ourShader.setVec3("dirLight.ambient", 0.1f, 0.1f, 0.1f);
+        ourShader.setVec3("dirLight.diffuse", 0.5f, 0.5f, 0.5f);
+        ourShader.setVec3("dirLight.specular", 0.5f, 0.5f, 0.5f);
+
+        // material properties
+        ourShader.setFloat("material.shininess", 32.0f);
+
 
         // projection transformations
         glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
