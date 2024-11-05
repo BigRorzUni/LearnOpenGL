@@ -106,7 +106,6 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/__wctype.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/__xlocale.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_abort.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_assert.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_ctermid.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_ctype.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_locale.h \
@@ -687,6 +686,7 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__thread/id.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__thread/poll_with_backoff.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__threading_support \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__tree \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__tuple/make_tuple_types.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__tuple/pair_like.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__tuple/sfinae_helpers.h \
@@ -902,6 +902,7 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/limits \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/locale \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/locale.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/map \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/math.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/memory \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/mutex \
@@ -927,6 +928,7 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/type_traits \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/typeinfo \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/unordered_map \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/unordered_set \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/utility \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/variant \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/vector \
@@ -1076,6 +1078,7 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stdarg_va_copy.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stdarg_va_list.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_header_macro.h \
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_max_align_t.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_null.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_nullptr_t.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_offsetof.h \
@@ -1089,17 +1092,30 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stdint.h \
   lib/assimp/include/assimp/config.h \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/Compiler/poppack1.h \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/Compiler/pushpack1.h \
   /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/Importer.hpp \
   /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/MathFunctions.h \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/aabb.h \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/anim.h \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/camera.h \
   /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/color4.h \
   /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/color4.inl \
   /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/defs.h \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/light.h \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/material.h \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/material.inl \
   /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/matrix3x3.h \
   /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/matrix3x3.inl \
   /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/matrix4x4.h \
   /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/matrix4x4.inl \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/mesh.h \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/metadata.h \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/postprocess.h \
   /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/quaternion.h \
   /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/quaternion.inl \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/scene.h \
+  /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/texture.h \
   /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/types.h \
   /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/vector2.h \
   /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/vector2.inl \
@@ -1401,8 +1417,14 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
   /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/vector_relational.hpp \
   /Users/bigrorz/LearnOpenGL/lib/stb_image.h \
   /Users/bigrorz/LearnOpenGL/src/headers/camera.h \
+  /Users/bigrorz/LearnOpenGL/src/headers/mesh.h \
+  /Users/bigrorz/LearnOpenGL/src/headers/model.h \
   /Users/bigrorz/LearnOpenGL/src/headers/shader.h
 
+
+/Users/bigrorz/LearnOpenGL/src/headers/model.h:
+
+/Users/bigrorz/LearnOpenGL/src/headers/mesh.h:
 
 /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/matrix_transform.inl:
 
@@ -1596,17 +1618,31 @@ CMakeFiles/Renderer.dir/src/main.cpp.o: /Users/bigrorz/LearnOpenGL/src/main.cpp 
 
 /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/types.h:
 
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/scene.h:
+
 /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/quaternion.inl:
+
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/metadata.h:
+
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/mesh.h:
 
 /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/matrix4x4.h:
 
 /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/matrix3x3.h:
+
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/material.inl:
+
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/material.h:
 
 /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/defs.h:
 
 /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/color4.h:
 
 /Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/MathFunctions.h:
+
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/Compiler/pushpack1.h:
+
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/Compiler/poppack1.h:
 
 lib/assimp/include/assimp/config.h:
 
@@ -1621,6 +1657,8 @@ lib/assimp/include/assimp/config.h:
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_nullptr_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_null.h:
+
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_max_align_t.h:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stddef_header_macro.h:
 
@@ -1732,6 +1770,8 @@ lib/assimp/include/assimp/config.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/variant:
 
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/unordered_set:
+
 /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/ext/vector_bool4_precision.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/typeinfo:
@@ -1766,6 +1806,8 @@ lib/assimp/include/assimp/config.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/math.h:
 
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/map:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/pthread/pthread_impl.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/locale.h:
@@ -1799,6 +1841,8 @@ lib/assimp/include/assimp/config.h:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/ctype.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/ctime:
+
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/light.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/cstring:
 
@@ -2075,6 +2119,8 @@ lib/assimp/include/assimp/config.h:
 /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/integer.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__tuple/make_tuple_types.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__tree:
 
 /Users/bigrorz/LearnOpenGL/lib/glm/include/glm/gtc/constants.hpp:
 
@@ -2604,6 +2650,8 @@ lib/assimp/include/assimp/config.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__concepts/derived_from.h:
 
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/anim.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__concepts/predicate.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__concepts/convertible_to.h:
@@ -2627,6 +2675,26 @@ lib/assimp/include/assimp/config.h:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__compare/weak_order.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__compare/synth_three_way.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/pstl_find.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/noexcept_move_assign_container.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_lower_bound.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/negation.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_abstract.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/has_unique_object_representation.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/ostream_iterator.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/reverse_copy.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_assignable.h:
+
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__compare/partial_order.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__filesystem/directory_options.h:
 
@@ -2796,26 +2864,6 @@ lib/assimp/include/assimp/config.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/rotate.h:
 
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/pstl_find.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/noexcept_move_assign_container.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_lower_bound.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/negation.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_abstract.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/has_unique_object_representation.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/ostream_iterator.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_trivially_assignable.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__compare/partial_order.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/reverse_copy.h:
-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/reverse.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_nothrow_move_assignable.h:
@@ -2853,6 +2901,8 @@ lib/assimp/include/assimp/config.h:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/pthread/sched.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/stable_partition.h:
+
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/camera.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_ssize_t.h:
 
@@ -3278,6 +3328,8 @@ lib/assimp/include/assimp/config.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/generate_n.h:
 
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/aabb.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/pstl_backends/cpu_backends/find_if.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__type_traits/is_pointer.h:
@@ -3369,6 +3421,8 @@ lib/assimp/include/assimp/config.h:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/unistd.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__ranges/ref_view.h:
+
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/postprocess.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/sys/_types/_mode_t.h:
 
@@ -3495,8 +3549,6 @@ lib/assimp/include/assimp/config.h:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__memory/uninitialized_algorithms.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_locale.h:
-
-/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/_assert.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__iterator/sortable.h:
 
@@ -3687,6 +3739,8 @@ lib/assimp/include/assimp/config.h:
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__algorithm/ranges_is_heap.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/AvailabilityInternal.h:
+
+/Users/bigrorz/LearnOpenGL/lib/assimp/include/assimp/texture.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/usr/include/c++/v1/__ranges/movable_box.h:
 
