@@ -137,7 +137,7 @@ int main()
         ourShader.setVec3("dirLight.direction", 0.4f, -1.0f, -0.3f);
 
         ourShader.setVec3("dirLight.ambient", 0.1f, 0.1f, 0.1f);
-        ourShader.setVec3("dirLight.diffuse", 0.5f, 0.5f, 0.5f);
+        ourShader.setVec3("dirLight.diffuse", 0.7f, 0.7f, 0.7f);
         ourShader.setVec3("dirLight.specular", 0.5f, 0.5f, 0.5f);
 
         // material properties
