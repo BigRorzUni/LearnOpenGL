@@ -145,8 +145,8 @@ lib/glfw/src/clean: lib/glfw/src/CMakeFiles/update_mappings.dir/clean
 # Target rules for target CMakeFiles/Renderer.dir
 
 # All Build rule for target.
-CMakeFiles/Renderer.dir/all: lib/glfw/src/CMakeFiles/glfw.dir/all
 CMakeFiles/Renderer.dir/all: lib/assimp/code/CMakeFiles/assimp.dir/all
+CMakeFiles/Renderer.dir/all: lib/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Renderer.dir/build.make CMakeFiles/Renderer.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Renderer.dir/build.make CMakeFiles/Renderer.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/bigrorz/LearnOpenGL/build/CMakeFiles --progress-num=1 "Built target Renderer"
