@@ -7,6 +7,10 @@ BUILD_DIR="build"
 EXECUTABLE="Renderer"
 
 run() {
+    cd "$BUILD_DIR" || exit
+    make
+    cd - || exit
+    
     ./"$BUILD_DIR"/"$EXECUTABLE"
 }
 

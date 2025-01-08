@@ -42,7 +42,6 @@ glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
 
 int main()
 {
-    chdir("..");
     #pragma region GLFW & GLAD Initialisation
     // ----------------- GLFW INIT -----------------
     // initialise and configure glfw
