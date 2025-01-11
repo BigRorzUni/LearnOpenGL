@@ -137,8 +137,9 @@ class Camera
         }
 
         // processes input received from a mouse input system. Expects the offset value in both the x and y direction.
-        void ProcessMouseMovement(float xOffset, float yOffset)
+        void ProcessMouseMovement(float xOffset, float yOffset, bool constrainPitch)
         {
+ 
             xOffset *= MouseSensitivity;
             yOffset *= MouseSensitivity;
 
@@ -146,13 +147,16 @@ class Camera
             Pitch += yOffset;
 
             // clamp pitch so camera doesn't flip
-            if(Pitch > 89.0f)
-                Pitch = 89.0f;
-            if(Pitch < -89.0f)
-                Pitch = -89.0f;
-        
+            if(constrainPitch)
+            {
+                if(Pitch > 89.0f)
+                    Pitch = 89.0f;
+                if(Pitch < -89.0f)
+                    Pitch = -89.0f;
+            }
             // update Front, Right and Up Vectors using the updated Euler angles
             updateCameraVectors(); 
+
         }
 
         // processes input received from a mouse scroll-wheel event. Only requires input on the vertical wheel-axis
