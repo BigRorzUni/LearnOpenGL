@@ -219,7 +219,7 @@ int main()
 
     // load textures
     // -------------
-    unsigned int cubeTexture = loadTexture("assets/debug.png");
+    unsigned int cubeTexture = loadTexture("assets/container.jpg");
     unsigned int planeTexture = loadTexture("assets/marble.jpg");
 
     // shader configuration
