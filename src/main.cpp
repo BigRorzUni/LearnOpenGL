@@ -283,14 +283,14 @@ int main()
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);   
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        // draw objects
-        // ------
-        shader.use();
-
+        // transformation matrices
         glm::mat4 model = glm::mat4(1.0f);
         glm::mat4 view = camera.GetViewMatrix();
         glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
-        
+
+        // draw objects
+        // ------
+        shader.use();
         shader.setMat4("view", view);
         shader.setMat4("projection", projection);
 
@@ -315,9 +315,9 @@ int main()
 
         // draw skybox as last
         glDepthFunc(GL_LEQUAL);  // change depth function so depth test passes when values are equal to depth buffer's content
+                                 // the depth value of the skybox is the min it can be due to perspective division trick for it to render behind everything
 
         skyShader.use();
-        view = glm::mat4(glm::mat3(camera.GetViewMatrix())); // remove translation from the view matrix
         skyShader.setMat4("view", view);
         skyShader.setMat4("projection", projection);
 
@@ -500,7 +500,7 @@ unsigned int loadCubemap(vector<std::string> faces)
             stbi_image_free(data);
         }
     }
-    
+
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     
