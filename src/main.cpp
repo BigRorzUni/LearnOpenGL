@@ -96,10 +96,6 @@ int main()
     
     #pragma endregion
 
-    // build and compile shaders
-    // -------------------------
-    Shader shader("shader.vs", "shader.fs");
-
     // set up vertex data 
     // -------------------------
     float cubeVertices[] = 
@@ -173,13 +169,23 @@ int main()
 
     // shader configuration
     // --------------------
-    shader.use();
-    shader.setInt("frontTexture", 0);
-    shader.setInt("backTexture", 1);
+    // build and compile shaders
+    // -------------------------
+    Shader redShader("shader.vs", "shader.fs");
+    Shader blueShader("shader.vs", "shader.fs");
+    Shader greenShader("shader.vs", "shader.fs");
+    Shader yellowShader("shader.vs", "shader.fs");
 
     // setting the binding point for uniform buffer block
-    unsigned int matricesIndex = glGetUniformBlockIndex(shader.ID, "Matrices");
-    glUniformBlockBinding(shader.ID, matricesIndex, 0);
+    unsigned int redIndex = glGetUniformBlockIndex(redShader.ID, "Matrices");
+    unsigned int blueIndex = glGetUniformBlockIndex(blueShader.ID, "Matrices");
+    unsigned int greenIndex = glGetUniformBlockIndex(greenShader.ID, "Matrices");
+    unsigned int yellowIndex = glGetUniformBlockIndex(yellowShader.ID, "Matrices");
+
+    glUniformBlockBinding(redShader.ID, redIndex, 0);
+    glUniformBlockBinding(blueShader.ID, blueIndex, 0);
+    glUniformBlockBinding(greenShader.ID, greenIndex, 0);
+    glUniformBlockBinding(yellowShader.ID, yellowIndex, 0);
 
     // setting uniform buffer block
     unsigned int matricesBlock;
@@ -223,26 +229,48 @@ int main()
         glBufferSubData(GL_UNIFORM_BUFFER, 64, 64, &view);
         glBindBuffer(GL_UNIFORM_BUFFER, 0);
 
+        glm::vec3 redColour(1.0f, 0.0f, 0.0f);
+        glm::vec3 blueColour(0.0f, 0.0f, 1.0f);
+        glm::vec3 greenColour(0.0f, 1.0f, 0.0f);
+        glm::vec3 yellowColour(1.0f, 1.0f, 0.0f);
+
         // draw objects
         // ------
-        shader.use();
-        shader.setVec3("cameraPos", camera.Position);
 
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, frontFacingTex);
-        
-        glActiveTexture(GL_TEXTURE1);
-        glBindTexture(GL_TEXTURE_2D, backFacingTex);
-
-        // cubes
         glBindVertexArray(cubeVAO);
-        model = glm::translate(model, glm::vec3(-1.0f, 0.0f, -1.0f));
-        shader.setMat4("model", model);
+
+        // red cube
+        redShader.use();
+        redShader.setVec3("colour", redColour);
+        model = glm::translate(model, glm::vec3(1.0f, -1.0f, -1.0f));
+        redShader.setMat4("model", model);
         glDrawArrays(GL_TRIANGLES, 0, 36);
+
+        // blue cube
+        blueShader.use();
+        blueShader.setVec3("colour", blueColour);
         model = glm::mat4(1.0f);
-        model = glm::translate(model, glm::vec3(2.0f, 0.0f, 0.0f));
-        shader.setMat4("model", model);
+        model = glm::translate(model, glm::vec3(1.0f, 1.0f, -1.0f));
+        blueShader.setMat4("model", model);
         glDrawArrays(GL_TRIANGLES, 0, 36);
+
+        // green cube
+        greenShader.use();
+        greenShader.setVec3("colour", greenColour);
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(-1.0f, 1.0f, -1.0f));
+        greenShader.setMat4("model", model);
+        glDrawArrays(GL_TRIANGLES, 0, 36);
+
+        // yellow cube
+        yellowShader.use();
+        yellowShader.setVec3("colour", yellowColour);
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(-1.0f, -1.0f, -1.0f));
+        blueShader.setMat4("model", model);
+        glDrawArrays(GL_TRIANGLES, 0, 36);
+
+
 
 
         // ----------------- SWAP BUFFERS AND POLL EVENTS --------------
