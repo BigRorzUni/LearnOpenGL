@@ -1,18 +1,16 @@
 #version 330 core
 
+in vec2 TexCoords;
+
 out vec4 FragColor;
 
-in vec3 Position;
-in vec3 Normal;
-
-uniform vec3 cameraPos;
-uniform samplerCube skybox;
+uniform sampler2D frontTexture;
+uniform sampler2D backTexture;
 
 void main()
 {   
-    float ratio = 1.00 / 1.52; // refractive index of air / refractive index of glass
-    vec3 I = normalize(Position - cameraPos);
-    vec3 R = refract(I, normalize(Normal), ratio);
-
-    FragColor = vec4(texture(skybox, R).rgb, 1.0);
+    if(gl_FrontFacing)
+        FragColor = texture(frontTexture, TexCoords);
+    else
+        FragColor = texture(backTexture, TexCoords);
 }
