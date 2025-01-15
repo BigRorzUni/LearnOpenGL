@@ -177,6 +177,22 @@ int main()
     shader.setInt("frontTexture", 0);
     shader.setInt("backTexture", 1);
 
+    // setting the binding point for uniform buffer block
+    unsigned int matricesIndex = glGetUniformBlockIndex(shader.ID, "Matrices");
+    glUniformBlockBinding(shader.ID, matricesIndex, 0);
+
+    // setting uniform buffer block
+    unsigned int matricesBlock;
+    glGenBuffers(1, &matricesBlock);
+    glBindBuffer(GL_UNIFORM_BUFFER, matricesBlock);
+    glBufferData(GL_UNIFORM_BUFFER, 128, NULL, GL_STATIC_DRAW); // 128 bytes
+    glBindBuffer(GL_UNIFORM_BUFFER, 0);
+
+    // bind uniform buffer object to that index as well
+    glBindBufferBase(GL_UNIFORM_BUFFER, 0, matricesBlock);
+    // glBindBufferRange(GL_UNIFORM_BUFFER, 0, matricesBlock, 0, 128); // specify an offset so multiple ubos can be bound to one index
+
+
     // render loop
     // -----------
     while (!glfwWindowShouldClose(window))
@@ -202,11 +218,14 @@ int main()
         glm::mat4 view = camera.GetViewMatrix();
         glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
 
+        glBindBuffer(GL_UNIFORM_BUFFER, matricesBlock);
+        glBufferSubData(GL_UNIFORM_BUFFER, 0, 64, &projection);
+        glBufferSubData(GL_UNIFORM_BUFFER, 64, 64, &view);
+        glBindBuffer(GL_UNIFORM_BUFFER, 0);
+
         // draw objects
         // ------
         shader.use();
-        shader.setMat4("view", view);
-        shader.setMat4("projection", projection);
         shader.setVec3("cameraPos", camera.Position);
 
         glActiveTexture(GL_TEXTURE0);
