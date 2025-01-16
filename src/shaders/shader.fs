@@ -2,12 +2,7 @@
 
 out vec4 FragColor;
 
-uniform sampler2D frontTexture;
-uniform sampler2D backTexture;
-
-uniform vec3 colour;
-
 void main()
-{   
-    FragColor = vec4(colour, 1.0);
+{
+    FragColor = vec4(0.0, 1.0, 0.0, 1.0);
 }
