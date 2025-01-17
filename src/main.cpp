@@ -218,11 +218,11 @@ void changeViewMode(GLFWwindow* window)
             break;
 
         case Wireframe:
-            glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
             currentMode = Normals;
             break;
 
         case Normals:
+            glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
             currentMode = Default;
             break;
     }
