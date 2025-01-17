@@ -99,11 +99,14 @@ int main()
     #pragma endregion
 
     // shader
-    Shader shader = Shader("modelShader.vs", "modelShader.fs", "explodingShader.gs");
+    Shader shader = Shader("modelShader.vs", "modelShader.fs");
+    Shader explodingShader = Shader("explodingShader.vs", "explodingShader.fs", "explodingShader.gs");
+    Shader normalShader = Shader("normal_visualisation.vs", "normal_visualisation.fs", "normal_visualisation.gs");
 
     // set up vertex data 
     // ------------------------
 
+    stbi_set_flip_vertically_on_load(true); // NECESSARY
     Model backpack("assets/backpack/backpack.obj");
 
     // render loop
@@ -131,16 +134,25 @@ int main()
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+        // first pass (draw object)
         shader.use();
 
         shader.setMat4("projection", projection);
         shader.setMat4("view", view);
         shader.setMat4("model", model);
-
-        shader.setFloat("Time", currentFrame);
-
         
         backpack.Draw(shader);
+
+        // second pass (draw normals)
+        normalShader.use();
+
+        normalShader.setMat4("projection", projection);
+        normalShader.setMat4("view", view);
+        normalShader.setMat4("model", model);
+
+        normalShader.setVec3("fColour", glm::vec3(1.0, 0.0, 0.0));
+        
+        backpack.Draw(normalShader);
 
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         // -------------------------------------------------------------------------------

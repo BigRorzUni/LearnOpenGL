@@ -5,7 +5,7 @@ layout (location = 2) in vec2 aTexCoords;
 
 out VS_OUT
 {
-    out vec2 texcoords;
+    vec2 texcoords;
 } vs_out;
 
 uniform mat4 model;
