@@ -96,13 +96,13 @@ int main()
     
     #pragma endregion
 
+    // shader
+    Shader shader = Shader("modelShader.vs", "modelShader.fs");
+
     // set up vertex data 
     // ------------------------
 
     Model backpack("assets/backpack/backpack.obj");
-
-    // shader
-    Shader shader = Shader("modelShader.vs", "modelShader.fs");
 
     // render loop
     // -----------
