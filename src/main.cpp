@@ -59,6 +59,8 @@ int main()
 #ifdef __APPLE__
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 #endif
+
+    stbi_set_flip_vertically_on_load(true); // NECESSARY
     
     // create a window
     GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "Learn OpenGL", NULL, NULL);
@@ -97,7 +99,7 @@ int main()
     #pragma endregion
 
     // shader
-    Shader shader = Shader("modelShader.vs", "modelShader.fs");
+    Shader shader = Shader("modelShader.vs", "modelShader.fs", "explodingShader.gs");
 
     // set up vertex data 
     // ------------------------
@@ -134,6 +136,8 @@ int main()
         shader.setMat4("projection", projection);
         shader.setMat4("view", view);
         shader.setMat4("model", model);
+
+        shader.setFloat("Time", currentFrame);
 
         
         backpack.Draw(shader);
