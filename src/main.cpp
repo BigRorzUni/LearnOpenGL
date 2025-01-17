@@ -18,9 +18,11 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 
+void processInput(GLFWwindow* window);
 void escInput(GLFWwindow* window);
 void tabInput(GLFWwindow* window);
 void cameraInput(GLFWwindow* window);
+void changeViewMode(GLFWwindow* window);
 
 unsigned int loadTexture(char const * path);
 unsigned int loadCubemap(vector<std::string> faces);
@@ -40,6 +42,15 @@ float lastFrame = 0.0f;
 
 // lighting
 glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
+
+enum ViewMode
+{
+    Default,
+    Wireframe,
+    Normals
+};
+
+ViewMode currentMode = Default;
 
 int main()
 {
@@ -119,10 +130,7 @@ int main()
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
         
-        // input
-        escInput(window);
-        tabInput(window);
-        cameraInput(window);
+        processInput(window);
 
         // transformation matrices
         glm::mat4 projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 1.0f, 100.0f);
@@ -144,15 +152,18 @@ int main()
         backpack.Draw(shader);
 
         // second pass (draw normals)
-        normalShader.use();
+        if(currentMode == Normals)
+        {
+            normalShader.use();
 
-        normalShader.setMat4("projection", projection);
-        normalShader.setMat4("view", view);
-        normalShader.setMat4("model", model);
+            normalShader.setMat4("projection", projection);
+            normalShader.setMat4("view", view);
+            normalShader.setMat4("model", model);
 
-        normalShader.setVec3("fColour", glm::vec3(1.0, 0.0, 0.0));
-        
-        backpack.Draw(normalShader);
+            normalShader.setVec3("fColour", glm::vec3(1.0, 0.0, 0.0));
+            
+            backpack.Draw(normalShader);
+        }
 
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         // -------------------------------------------------------------------------------
@@ -165,6 +176,13 @@ int main()
 }
 
 // ----------------- PROCESS INPUT -----------------
+void processInput(GLFWwindow* window)
+{
+    escInput(window);
+    tabInput(window);
+    cameraInput(window);
+}
+
 void escInput(GLFWwindow* window)
 {
     // escape to exit
@@ -184,13 +202,30 @@ void tabInput(GLFWwindow* window)
     // tab to switch between fill and line mode
     if(tabPressed && !tabPressedLastFrame)
     {
-        if(polygonMode[0] == GL_LINE && polygonMode[1] == GL_LINE)
-            glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-        else
-            glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+        changeViewMode(window);
     }
 
     tabPressedLastFrame = tabPressed;
+}
+
+void changeViewMode(GLFWwindow* window)
+{
+    switch(currentMode)
+    {
+        case Default:
+            glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+            currentMode = Wireframe;
+            break;
+
+        case Wireframe:
+            glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+            currentMode = Normals;
+            break;
+
+        case Normals:
+            currentMode = Default;
+            break;
+    }
 }
 
 void cameraInput(GLFWwindow* window)
