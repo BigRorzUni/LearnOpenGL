@@ -35,6 +35,8 @@ public:
     vector<unsigned int> indices;
     vector<Texture>      textures;
 
+    unsigned int VAO;
+
     // constructor
     Mesh(vector<Vertex> _vertices, vector<unsigned int> _indices, vector<Texture> _textures)
     {
@@ -95,7 +97,12 @@ public:
 
 private:
     // render data 
-    unsigned int VAO, VBO, EBO;
+    unsigned int VBO, EBO;
+
+    unsigned int getVAO()
+    {
+        return VAO;
+    }
 
     // initializes all the buffer objects/arrays
     void setupMesh()
