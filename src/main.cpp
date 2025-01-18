@@ -109,16 +109,53 @@ int main()
     
     #pragma endregion
 
-    // shader
-    Shader shader = Shader("modelShader.vs", "modelShader.fs");
-    Shader explodingShader = Shader("explodingShader.vs", "explodingShader.fs", "explodingShader.gs");
-    Shader normalShader = Shader("normal_visualisation.vs", "normal_visualisation.fs", "normal_visualisation.gs");
-
     // set up vertex data 
     // ------------------------
+    float quadVertices[] = 
+    {
+        // positions // colors
+        -0.05f, 0.05f, 1.0f, 0.0f, 0.0f,
+        0.05f, -0.05f, 0.0f, 1.0f, 0.0f,
+        -0.05f, -0.05f, 0.0f, 0.0f, 1.0f,
+        -0.05f, 0.05f, 1.0f, 0.0f, 0.0f,
+        0.05f, -0.05f, 0.0f, 1.0f, 0.0f,
+        0.05f, 0.05f, 0.0f, 1.0f, 1.0f
+    };
 
-    stbi_set_flip_vertically_on_load(true); // NECESSARY
-    Model backpack("assets/backpack/backpack.obj");
+    unsigned int VAO, VBO;
+    glGenVertexArrays(1, &VAO);
+    glGenBuffers(1, &VBO);
+
+    glBindVertexArray(VAO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+
+    glBufferData(GL_ARRAY_BUFFER, sizeof(quadVertices), quadVertices, GL_STATIC_DRAW);
+
+    glEnableVertexAttribArray(0);
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
+
+    glEnableVertexAttribArray(1);
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(2 * sizeof(float)));
+
+    glBindVertexArray(0);
+
+    // shader
+    Shader shader = Shader("instancingShader.vs", "instancingShader.fs");
+
+    glm::vec2 translations[100];
+    int index = 0;
+    float offset = 0.1f;
+
+    for(int y = -10; y < 10; y += 2)
+    {
+        for(int x = -10; x < 10; x += 2)
+        {
+            glm::vec2 translation;
+            translation.x = (float)x / 10.0f + offset;
+            translation.y = (float)y / 10.0f + offset;
+            translations[index++] = translation;
+        }
+    }
 
     // render loop
     // -----------
@@ -142,28 +179,12 @@ int main()
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        // first pass (draw object)
         shader.use();
+        for(unsigned int i = 0; i < 100; i++)
+            shader.setVec2(("offsets["+std::to_string(i)+"]"), translations[i]);
 
-        shader.setMat4("projection", projection);
-        shader.setMat4("view", view);
-        shader.setMat4("model", model);
-        
-        backpack.Draw(shader);
-
-        // second pass (draw normals)
-        if(currentMode == Normals)
-        {
-            normalShader.use();
-
-            normalShader.setMat4("projection", projection);
-            normalShader.setMat4("view", view);
-            normalShader.setMat4("model", model);
-
-            normalShader.setVec3("fColour", glm::vec3(1.0, 0.0, 0.0));
-            
-            backpack.Draw(normalShader);
-        }
+        glBindVertexArray(VAO);
+        glDrawArraysInstanced(GL_TRIANGLES, 0, 6, 100);
 
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         // -------------------------------------------------------------------------------

@@ -22,10 +22,11 @@ void GenerateLine(int index)
 
 void main()
 {
-    //GenerateLine(0); // first vertex normal
-    //GenerateLine(1); // second vertex normal
-    //GenerateLine(2); // third vertex normal
+    GenerateLine(0); // first vertex normal
+    GenerateLine(1); // second vertex normal
+    GenerateLine(2); // third vertex normal
 
+    /*
     
     // get center of the face
     vec4 faceCentre = gl_in[0].gl_Position + (gl_in[1].gl_Position / 2) + (gl_in[2].gl_Position / 2);
@@ -38,4 +39,5 @@ void main()
     gl_Position = projection * (faceCentre + vec4(avgNormal, 0.0) * MAGNITUDE);
     EmitVertex();
     EndPrimitive();
+    */
 }
